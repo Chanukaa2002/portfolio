@@ -16,7 +16,7 @@ const Contact = () => {
                     href="https://www.linkedin.com/in/chanuka-dilshan-21a076223/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-3 transition-transform transform rounded-full bg-gradient-to-r from-blue-500 via-indigo-600 to-purple-700 hover:scale-90"
+                    className="p-3 transition-transform transform rounded-full bg-gradient-to-r from-pink-500 via-orange-500 to-yellow-500 hover:scale-90"
                   >
                     <i className="px-1 text-3xl text-white fa-brands fa-linkedin"></i>
                   </a>
@@ -24,7 +24,7 @@ const Contact = () => {
                     href="https://github.com/Chanukaa2002"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-3 ml-5 transition-transform transform rounded-full bg-gradient-to-r from-blue-500 via-indigo-600 to-purple-700 hover:scale-90"
+                    className="p-3 ml-5 transition-transform transform rounded-full bg-gradient-to-r from-pink-500 via-orange-500 to-yellow-500 hover:scale-90"
                   >
                     <i className="px-1 text-3xl text-white fa-brands fa-github"></i>
                   </a>
@@ -32,7 +32,7 @@ const Contact = () => {
                     href="https://www.instagram.com/chanuka_dilshann/profilecard/?igsh=Z29rcDI5eTA5c205"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-3 ml-5 transition-transform transform rounded-full bg-gradient-to-r from-blue-500 via-indigo-600 to-purple-700 hover:scale-90"
+                    className="p-3 ml-5 transition-transform transform rounded-full bg-gradient-to-r from-pink-500 via-orange-500 to-yellow-500 hover:scale-90"
                   >
                     <i className="px-1 text-3xl text-white fa-brands fa-instagram"></i>
                   </a>
@@ -40,7 +40,7 @@ const Contact = () => {
                     href="https://medium.com/@Chanuka72"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-3 ml-5 transition-transform transform rounded-full bg-gradient-to-r from-blue-500 via-indigo-600 to-purple-700 hover:scale-90"
+                    className="p-3 ml-5 transition-transform transform rounded-full bg-gradient-to-r from-pink-500 via-orange-500 to-yellow-500 hover:scale-90"
                   >
                     <i className="px-1 text-xl text-white fa-brands fa-medium"></i>
                   </a>
