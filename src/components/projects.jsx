@@ -163,7 +163,34 @@ const Project = () => {
                   </a>
                 </div>
               </div>
-              <div className="p-4 bg-gray-800 rounded-lg">hello6</div>
+
+              {/* fifth project */}
+              <div className="p-4 bg-gray-800 rounded-lg">
+                <p className="relative inline-block text-xl font-bold">
+                  StudentBots
+                  <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 via-indigo-600 to-purple-700"></div>
+                </p>
+                <br />
+                <p className="pt-5">
+                  This is a School Managment system, create for University
+                  project
+                </p>
+                <br />
+                <span className="pt-10 font-semibold">
+                  Technologies: C#,.Net, mysql.
+                </span>
+                <br />
+                <div className="flex justify-center pt-4">
+                  <a
+                    href="https://github.com/Chanukaa2002/Student_Bots"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-3 mr-5 transition-transform transform rounded-full bg-gradient-to-r from-blue-500 via-indigo-600 to-purple-700 hover:scale-90"
+                  >
+                    <i className="text-2xl text-white fas fa-code"></i>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
