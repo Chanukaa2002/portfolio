@@ -3,13 +3,14 @@ import React from "react";
 const Project = () => {
   return (
     <>
-      <section id="project" >
+      <section id="project">
         <div className="pt-56 pb-10 text-center text-white">
           <p className="pb-10 text-4xl font-bold">Projects</p>
           <div className="flex items-center justify-center">
-            <div className="w-3/4">
-              <div className="grid grid-cols-3 gap-4 text-center">
-                {/* twitter project */}
+            <div className="w-full px-4 md:w-3/4">
+              {/* Use responsive grid classes */}
+              <div className="grid grid-cols-1 gap-6 text-center sm:grid-cols-2 lg:grid-cols-3">
+                {/* Twitter project */}
                 <div className="p-4 bg-gray-800 rounded-lg">
                   <p className="relative inline-block text-xl font-bold">
                     Twitter Backend clone
@@ -21,8 +22,7 @@ const Project = () => {
                   </p>
                   <br />
                   <span className="pt-10 font-semibold">
-                    Technologies: Node.js, Express, MongoDB, JSON Web Token,
-                    Postman.
+                    Technologies: Node.js, Express, MongoDB, JSON Web Token, Postman.
                   </span>
                   <br />
                   <div className="flex justify-center pt-4">
@@ -37,7 +37,7 @@ const Project = () => {
                   </div>
                 </div>
 
-                {/* e-commerce project */}
+                {/* E-commerce project */}
                 <div className="p-4 bg-gray-800 rounded-lg">
                   <p className="relative inline-block text-xl font-bold">
                     FullStack E-Commerce Webapp
@@ -45,13 +45,11 @@ const Project = () => {
                   </p>
                   <br />
                   <p className="pt-5">
-                    this is simple e-commerce webapp that can create,update and
-                    delete products.
+                    This is a simple e-commerce webapp that can create, update, and delete products.
                   </p>
                   <br />
                   <span className="pt-10 font-semibold">
-                    Technologies: Node.js, Express, MongoDB, React js, Tailwind
-                    css, Postman.
+                    Technologies: Node.js, Express, MongoDB, React js, Tailwind CSS, Postman.
                   </span>
                   <br />
                   <div className="flex justify-center pt-4">
@@ -74,7 +72,7 @@ const Project = () => {
                   </div>
                 </div>
 
-                {/* portfolio project */}
+                {/* Portfolio project */}
                 <div className="p-4 bg-gray-800 rounded-lg">
                   <p className="relative inline-block text-xl font-bold">
                     Portfolio Website
@@ -82,11 +80,11 @@ const Project = () => {
                   </p>
                   <br />
                   <p className="pt-5">
-                    This is my portfolio website showcase my skills and projects
+                    This is my portfolio website showcasing my skills and projects.
                   </p>
                   <br />
                   <span className="pt-10 font-semibold">
-                    Technologies: React js,Tailwind css.
+                    Technologies: React JS, Tailwind CSS.
                   </span>
                   <br />
                   <div className="flex justify-center pt-4">
@@ -109,7 +107,7 @@ const Project = () => {
                   </div>
                 </div>
 
-                {/* weather project */}
+                {/* Weather project */}
                 <div className="p-4 bg-gray-800 rounded-lg">
                   <p className="relative inline-block text-xl font-bold">
                     Weather API
@@ -117,8 +115,7 @@ const Project = () => {
                   </p>
                   <br />
                   <p className="pt-5">
-                    This is a Simple Weather API that can be check current
-                    weather by city
+                    This is a Simple Weather API that can check the current weather by city.
                   </p>
                   <br />
                   <span className="pt-10 font-semibold">
@@ -153,13 +150,11 @@ const Project = () => {
                   </p>
                   <br />
                   <p className="pt-5">
-                    This is a Simple Machine Learning model to predict rock and
-                    mines in the deep sea
+                    This is a Simple Machine Learning model to predict rock and mines in the deep sea.
                   </p>
                   <br />
                   <span className="pt-10 font-semibold">
-                    Technologies: Python, Numpy, Pandas, Seaborn,Jupiter
-                    notebook.
+                    Technologies: Python, Numpy, Pandas, Seaborn, Jupyter Notebook.
                   </span>
                   <br />
                   <div className="flex justify-center pt-4">
@@ -174,7 +169,7 @@ const Project = () => {
                   </div>
                 </div>
 
-                {/* soundwave project */}
+                {/* Soundwave project */}
                 <div className="p-4 bg-gray-800 rounded-lg">
                   <p className="relative inline-block text-xl font-bold">
                     SoundWave (Music app)
@@ -182,12 +177,11 @@ const Project = () => {
                   </p>
                   <br />
                   <p className="pt-5">
-                    This is a Music listen and uploading application , create
-                    for University project
+                    This is a Music listening and uploading application created for a University project.
                   </p>
                   <br />
                   <span className="pt-10 font-semibold">
-                    Technologies: Java,Java Swing, mysql.
+                    Technologies: Java, Java Swing, MySQL.
                   </span>
                   <br />
                   <div className="flex justify-center pt-4">
@@ -202,7 +196,7 @@ const Project = () => {
                   </div>
                 </div>
 
-                {/* studentbot project */}
+                {/* StudentBot project */}
                 <div className="p-4 bg-gray-800 rounded-lg">
                   <p className="relative inline-block text-xl font-bold">
                     StudentBots
@@ -210,12 +204,11 @@ const Project = () => {
                   </p>
                   <br />
                   <p className="pt-5">
-                    This is a School Managment system, create for University
-                    project
+                    This is a School Management system, created for a University project.
                   </p>
                   <br />
                   <span className="pt-10 font-semibold">
-                    Technologies: C#,.Net, mysql.
+                    Technologies: C#, .NET, MySQL.
                   </span>
                   <br />
                   <div className="flex justify-center pt-4">

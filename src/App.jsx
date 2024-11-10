@@ -34,16 +34,21 @@ function App() {
   return (
     <>
       <div className="absolute inset-0 stars -z-10" />
-
-      <div className="flex flex-col min-h-screen space-y-16">
-        <NavBar />
-        <ProfilePicture />
-        <MainTags />
-        <About />
-        <Project />
-        <Contact />
-        <Footer />
+      <NavBar />
+      {/* Flex container for ProfilePicture and MainTags */}
+      <div className="flex flex-col items-center justify-center space-y-1 md:flex-row md:space-y-0 md:space-x-8">
+        <div className="pr-28">
+          <ProfilePicture />
+        </div>
+        <div>
+          <MainTags />
+        </div>
       </div>
+
+      <About />
+      <Project />
+      <Contact />
+      <Footer />
     </>
   );
 }

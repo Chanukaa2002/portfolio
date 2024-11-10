@@ -10,8 +10,8 @@ const About = () => {
 
   // Lists for each section
   const skillsList = (
-    <div className="flex justify-center space-x-10 text-left">
-      <ul className="pl-6 text-xl list-disc">
+    <div className="flex justify-center space-x-4 text-left sm:space-x-10">
+      <ul className="pl-6 text-base list-disc sm:text-xl">
         <li>Node.js</li>
         <li>Express</li>
         <li>MongoDB</li>
@@ -19,7 +19,7 @@ const About = () => {
         <li>Postman</li>
         <li>PHP</li>
       </ul>
-      <ul className="pl-6 text-xl list-disc">
+      <ul className="pl-6 text-base list-disc sm:text-xl">
         <li>.NET</li>
         <li>Docker</li>
         <li>React JS</li>
@@ -30,10 +30,10 @@ const About = () => {
   );
 
   const educationsList = (
-    <ul className="pl-6 mx-auto text-xl text-left list-disc">
+    <ul className="pl-6 mx-auto text-base text-left list-disc sm:text-xl">
       <li>
         Higher National Diploma in Software Engineering
-        <div className="text-base text-gray-400 ">
+        <div className="text-sm text-gray-400 sm:text-base">
           <span>(Reading)</span>
           <br />
           <span>National Institute of Business Management - 2024</span>
@@ -41,7 +41,7 @@ const About = () => {
       </li>
       <li>
         Diploma in Software Engineering
-        <div className="text-base text-gray-400 ">
+        <div className="text-sm text-gray-400 sm:text-base">
           <span>GPA:4.00</span>
           <br />
           <span>National Institute of Business Management - 2023</span>
@@ -51,7 +51,7 @@ const About = () => {
   );
 
   const certificationsList = (
-    <ul className="pl-6 mx-auto text-xl text-left list-disc">
+    <ul className="pl-6 mx-auto text-base text-left list-disc sm:text-xl">
       <li>
         <a
           href="https://open.uom.lk/lms/mod/customcert/verify_certificate.php?contextid=4776&code=kcsp4kXOAk&qrcode=1"
@@ -98,11 +98,11 @@ const About = () => {
   return (
     <>
       <section id="about" className="h-screen">
-        <div className="pt-56 pb-10 text-center text-white">
-          <p className="pb-3 text-4xl font-bold">About Me</p>
+        <div className="pb-10 text-center text-white pt-28">
+          <p className="pb-3 text-3xl font-bold sm:text-4xl">About Me</p>
           <div className="flex items-center justify-center">
-            <div className="w-2/3 text-center">
-              <p className="text-xl text-justify">
+            <div className="w-11/12 text-center sm:w-2/3">
+              <p className="text-base text-justify sm:text-xl">
                 Hello! I'm a 22-year-old backend developer and a current
                 undergraduate at the National Institute of Business Management
                 (NIBM). Passionate about building efficient, scalable systems, I
@@ -121,7 +121,7 @@ const About = () => {
               </p>
             </div>
           </div>
-          <div className="flex justify-center pt-5 space-x-10 text-2xl">
+          <div className="flex justify-center pt-5 space-x-6 text-lg sm:space-x-10 sm:text-2xl">
             {["Skills", "Educations", "Certifications"].map(
               (section, index) => (
                 <div
@@ -142,17 +142,15 @@ const About = () => {
 
           {/* Conditional Rendering of the Lists */}
           {activeSection === "Skills" && (
-            <div className="absolute pt-5 left-1/3 min-h-[200px]">
-              {skillsList}
-            </div>
+            <div className="pt-5 sm:left-1/3 min-h-[200px]">{skillsList}</div>
           )}
           {activeSection === "Educations" && (
-            <div className="absolute pt-5 left-1/3 min-h-[200px]">
+            <div className="pt-5 sm:left-1/3 min-h-[200px]">
               {educationsList}
             </div>
           )}
           {activeSection === "Certifications" && (
-            <div className="absolute pt-5 left-1/3 min-h-[200px]">
+            <div className="pt-5 sm:left-1/3 min-h-[200px]">
               {certificationsList}
             </div>
           )}
