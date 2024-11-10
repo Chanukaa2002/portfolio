@@ -4,6 +4,8 @@ import ProfilePicture from "./components/ProfilePicture";
 import MainTags from "./components/MainTags";
 import About from "./components/About";
 import Project from "./components/projects";
+import Footer from "./components/Footer";
+import Contact from "./components/Contact";
 import "../src/styles/background.css";
 
 function App() {
@@ -39,6 +41,8 @@ function App() {
         <MainTags />
         <About />
         <Project />
+        <Contact />
+        <Footer />
       </div>
     </>
   );

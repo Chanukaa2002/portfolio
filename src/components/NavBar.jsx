@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-scroll"; // Import Link from react-scroll
 
 const NavBar = () => {
   return (
@@ -11,26 +12,33 @@ const NavBar = () => {
               <div className="flex items-center flex-shrink-0"></div>
               <div className="hidden sm:ml-6 sm:block">
                 <div className="flex space-x-4">
-                  <a
-                    href="#"
-                    className="px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white"
+                  <Link
+                    to="about" // Match the target section id
+                    smooth={true}
+                    duration={1250} // Adjust scroll duration
+                    className="px-3 py-2 text-sm font-medium text-gray-300 rounded-md cursor-pointer hover:bg-gray-700 hover:text-white"
                   >
                     About
-                  </a>
-                  <a
-                    href="#"
-                    className="px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white"
+                  </Link>
+                  <Link
+                    to="project"
+                    smooth={true}
+                    duration={1250}
+                    className="px-3 py-2 text-sm font-medium text-gray-300 rounded-md cursor-pointer hover:bg-gray-700 hover:text-white"
                   >
                     Project
-                  </a>
-                  <a
-                    href="#"
-                    className="px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white"
+                  </Link>
+                  <Link
+                    to="contact"
+                    smooth={true}
+                    duration={1250}
+                    className="px-3 py-2 text-sm font-medium text-gray-300 rounded-md cursor-pointer hover:bg-gray-700 hover:text-white"
                   >
                     Contact
-                  </a>
+                  </Link>
                   <a
-                    href="#"
+                    href="https://medium.com/@Chanuka72"
+                    target="_blank"
                     className="px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white"
                   >
                     Blog
@@ -41,33 +49,41 @@ const NavBar = () => {
           </div>
         </div>
 
+        {/* Mobile menu */}
         <div className="sm:hidden" id="mobile-menu">
           <div className="px-2 pt-2 pb-3 space-y-1">
-            <a
-              href="#"
+            <Link
+              to="about"
+              smooth={true}
+              duration={50}
               className="block px-3 py-2 text-base font-medium text-white bg-gray-900 rounded-md"
-              aria-current="page"
             >
               Dashboard
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              to="team"
+              smooth={true}
+              duration={50}
               className="block px-3 py-2 text-base font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white"
             >
               Team
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              to="projects"
+              smooth={true}
+              duration={500}
               className="block px-3 py-2 text-base font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white"
             >
               Projects
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              to="calendar"
+              smooth={true}
+              duration={50}
               className="block px-3 py-2 text-base font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white"
             >
               Calendar
-            </a>
+            </Link>
           </div>
         </div>
       </nav>
