@@ -1,0 +1,44 @@
+/* Full-page container for stars */
+.stars {
+  position: fixed; /* Make stars fixed to cover the entire scrollable area */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  pointer-events: none; /* Prevent interaction */
+  z-index: -1;
+}
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background-color: rgb(249, 242, 205);
+  border-radius: 50%;
+  animation: moveStars linear infinite;
+}
+
+/* Animation for star movement */
+@keyframes moveStars {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(-20px) scale(1.2); /* Stars move upward */
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.8;
+  }
+}
+
+/* Background color for night sky */
+body {
+  background-color: #1a1a1a;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
