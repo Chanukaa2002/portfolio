@@ -7,9 +7,24 @@ const NavBar = () => {
 
   return (
     <div>
-      <nav className="fixed top-0 left-0 right-0 z-50 w-full px-4 mx-auto mt-2 bg-gray-700 rounded-full sm:w-10/12 md:w-8/12 lg:w-6/12 xl:w-4/12">
+      <nav className="fixed top-0 left-0 right-0 z-50 w-full px-4 mx-auto mt-2 bg-transparent rounded-full sm:bg-gray-700 sm:w-10/12 md:w-8/12 lg:w-6/12 xl:w-4/12">
+
         <div className="flex items-center justify-between px-4 py-4 mx-auto max-w-7xl">
-          {/* Desktop Menu */}
+          {/* Mobile Menu Toggle (Hamburger) */}
+          <div className="sm:hidden">
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="text-gray-300 focus:outline-none"
+            >
+              {isMobileMenuOpen ? (
+                <AiOutlineClose size={24} />
+              ) : (
+                <AiOutlineMenu size={24} />
+              )}
+            </button>
+          </div>
+
+          {/* Desktop Menu (hidden on small screens) */}
           <div className="hidden sm:flex sm:flex-1 sm:justify-center">
             <div className="flex space-x-4">
               <Link
@@ -36,22 +51,7 @@ const NavBar = () => {
               >
                 Contact
               </Link>
-              
             </div>
-          </div>
-
-          {/* Mobile Menu Toggle */}
-          <div className="flex sm:hidden">
-            <button
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-gray-300 focus:outline-none"
-            >
-              {isMobileMenuOpen ? (
-                <AiOutlineClose size={24} />
-              ) : (
-                <AiOutlineMenu size={24} />
-              )}
-            </button>
           </div>
         </div>
 

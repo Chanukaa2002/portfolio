@@ -1,5 +1,6 @@
 import React from "react";
 import Typed from "typed.js";
+import ScrollRevealComponent from "../utils/ScrollRevealComponent";
 
 function MainTags() {
   const el = React.useRef(null);
@@ -26,41 +27,42 @@ function MainTags() {
   }, []);
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen px-4 text-center md:text-left md:items-start md:px-16 lg:px-32 md:py-1">
-      {/* Dynamic Text */}
-      <div>
-        <h1 className="text-3xl font-bold text-white sm:text-4xl md:text-6xl lg:text-6xl">
-          I am <br />
-          <span
-            ref={el}
-            className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-orange-500 to-yellow-500"
-          />
-        </h1>
-      </div>
+    <ScrollRevealComponent>
+      <div className="flex flex-col items-center justify-center h-screen px-4 text-center md:text-left md:items-start md:px-16 lg:px-32 md:py-1">
+        {/* Dynamic Text */}
+        <div>
+          <h1 className="text-3xl font-bold text-white sm:text-4xl md:text-6xl lg:text-6xl">
+            I am <br />
+            <span
+              ref={el}
+              className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-orange-500 to-yellow-500"
+            />
+          </h1>
+        </div>
 
-      {/* Description and Button */}
-      <div className="mt-6 text-base text-gray-300 sm:text-lg md:text-xl lg:text-2xl">
-        <p>
-          Backend Developer from Sri Lanka, specializing in creating powerful,
-          scalable systems that drive seamless digital experiences.
-        </p>
-        <a
-          href="https://drive.google.com/uc?export=download&id=1qpo0LgXjKEyfzn1HKywKZJXXyhj1cnOO"
-          download
-        >
-          <button className="px-6 py-2 mt-4 font-bold text-white rounded-full bg-gradient-to-r from-pink-500 via-orange-500 to-yellow-500 hover:bg-gradient-to-r hover:from-pink-600 hover:via-orange-600 hover:to-yellow-600">
-            Download CV
-          </button>
-        </a>
-      </div>
+        {/* Description and Button */}
+        <div className="mt-6 text-base text-gray-300 sm:text-lg md:text-xl lg:text-2xl">
+          <p>
+            Backend Developer from Sri Lanka, specializing in creating powerful,
+            scalable systems that drive seamless digital experiences.
+          </p>
+          <a
+            href="https://drive.google.com/uc?export=download&id=1qpo0LgXjKEyfzn1HKywKZJXXyhj1cnOO"
+            download
+          >
+            <button className="px-6 py-2 mt-4 font-bold text-white rounded-full bg-gradient-to-r from-pink-500 via-orange-500 to-yellow-500 hover:bg-gradient-to-r hover:from-pink-600 hover:via-orange-600 hover:to-yellow-600">
+              Download CV
+            </button>
+          </a>
+        </div>
 
-      {/* Reduce margin-top on small screens */}
-      <div className="mt-10 md:mt-20">
-        {" "}
-        {/* Adjust margin here */}
-        {/* Main Tags section content */}
+        {/* Reduce margin-top on small screens */}
+        <div className="mt-10 md:mt-20 sm:mt-4">
+          {/* Adjust margin for small screens */}
+          {/* Main Tags section content */}
+        </div>
       </div>
-    </div>
+    </ScrollRevealComponent>
   );
 }
 

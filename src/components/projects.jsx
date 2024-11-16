@@ -1,8 +1,10 @@
 import React from "react";
+import ScrollRevealComponent from "../utils/ScrollRevealComponent";
 
 const Project = () => {
   return (
     <>
+    <ScrollRevealComponent>
       <section id="project">
         <div className="pt-56 pb-10 text-center text-white">
           <p className="pb-10 text-4xl font-bold">Projects</p>
@@ -236,6 +238,8 @@ const Project = () => {
           </div>
         </div>
       </section>
+      
+    </ScrollRevealComponent>
     </>
   );
 };

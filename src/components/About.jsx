@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ScrollRevealComponent from "../utils/ScrollRevealComponent";
 
 const About = () => {
   // Set default active section to "Skills"
@@ -100,7 +101,7 @@ const About = () => {
   );
 
   return (
-    <>
+    <ScrollRevealComponent>
       <section id="about" className="h-screen">
         <div className="pb-10 text-center text-white pt-28">
           <p className="pb-3 text-3xl font-bold sm:text-4xl">About Me</p>
@@ -170,7 +171,7 @@ const About = () => {
           </div>
         </div>
       </section>
-    </>
+    </ScrollRevealComponent>
   );
 };
 

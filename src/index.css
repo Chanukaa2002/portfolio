@@ -2,5 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 body {
-  background-color: #001F3F;
+  background-color: #001f3f;
+}
+body,
+html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Disable horizontal scrolling */
+  width: 100%; /* Ensure full-width layout */
 }

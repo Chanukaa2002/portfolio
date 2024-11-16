@@ -16,7 +16,7 @@ function App() {
 
   const createStars = () => {
     const starContainer = document.querySelector(".stars");
-    const numberOfStars = 150;
+    const numberOfStars = 250;
 
     // Create star elements
     for (let i = 0; i < numberOfStars; i++) {
