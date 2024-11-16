@@ -5,12 +5,11 @@ const Contact = () => {
   return (
     <ScrollRevealComponent>
       <section id="contact">
-        <div className="pt-56 pb-10 text-center text-white">
+        <div className="pt-32 pb-10 text-center text-white md:pt-56">
           <p className="pb-10 text-4xl font-bold">Contact Me</p>
           <div className="flex items-center justify-center">
             <div className="w-3/4">
               <div className="grid grid-cols-1 gap-4 text-center">
-                {/* <div className="p-4 bg-gray-800 rounded-lg">hello</div> */}
                 <div className="p-4 rounded-lg">
                   <div className="flex justify-center pt-4">
                     <a

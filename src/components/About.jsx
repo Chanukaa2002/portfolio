@@ -108,14 +108,15 @@ const About = () => {
           <div className="flex items-center justify-center">
             <div className="w-11/12 text-center sm:w-2/3">
               <p className="text-base text-justify sm:text-xl">
-                Hello! I'm a 22-year-old backend developer and a current
+                Hello! I'm a 22-year-old backend developer, a current
                 undergraduate at the National Institute of Business Management
-                (NIBM). Passionate about building efficient, scalable systems, I
-                specialize in backend development and enjoy tackling complex
-                challenges in server-side programming. My studies at NIBM have
-                equipped me with a solid foundation in software development, and
-                my hands-on experience in the field has given me the skills to
-                turn concepts into functional, high-performing applications.
+                (NIBM) and Postman Student Expert. Passionate about building
+                efficient, scalable systems, I specialize in backend development
+                and enjoy tackling complex challenges in server-side
+                programming. My studies at NIBM have equipped me with a solid
+                foundation in software development, and my hands-on experience
+                in the field has given me the skills to turn concepts into
+                functional, high-performing applications.
                 <br />
                 <br /> Driven by curiosity and a desire to create seamless
                 digital experiences, I’m constantly learning and honing my
