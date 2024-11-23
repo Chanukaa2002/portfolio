@@ -7,6 +7,8 @@ import Project from "./components/projects";
 import Footer from "./components/Footer";
 import Contact from "./components/Contact";
 import "../src/styles/background.css";
+import BLogContaint from "./blog/BLogContaint";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   useEffect(() => {

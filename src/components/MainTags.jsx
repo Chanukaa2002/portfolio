@@ -10,7 +10,7 @@ function MainTags() {
       strings: [
         '<span class="text-white">A</span> <span class="gradient-text">Backend Developer</span>',
         '<span class="text-white">An</span> <span class="gradient-text">Undergraduate</span>',
-        '<span class="text-white">A</span> <span class="gradient-text">Freelancer</span>',
+        '<span class="text-white">A</span> <span class="gradient-text">Self Learner</span>',
         '<span class="text-white">A</span> <span class="gradient-text">Programmer</span>',
       ],
       typeSpeed: 70,
