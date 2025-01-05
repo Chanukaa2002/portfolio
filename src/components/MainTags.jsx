@@ -35,7 +35,7 @@ function MainTags() {
             I am <br />
             <span
               ref={el}
-              className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-orange-500 to-yellow-500"
+              className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-lime-600 via-lime-500 to-lime-400"
             />
           </h1>
         </div>
@@ -50,7 +50,7 @@ function MainTags() {
             href="https://drive.google.com/uc?export=download&id=1qpo0LgXjKEyfzn1HKywKZJXXyhj1cnOO"
             download
           >
-            <button className="px-6 py-2 mt-4 font-bold text-white rounded-full bg-gradient-to-r from-pink-500 via-orange-500 to-yellow-500 hover:bg-gradient-to-r hover:from-pink-600 hover:via-orange-600 hover:to-yellow-600">
+            <button className="px-6 py-2 mt-4 font-bold text-white rounded-full bg-gradient-to-r from-lime-600 via-lime-500 to-lime-400 hover:bg-gradient-to-r hover:from-lime-600 hover:via-lime-500 hover:to-lime-300">
               Download CV
             </button>
           </a>

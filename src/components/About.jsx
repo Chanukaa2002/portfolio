@@ -59,7 +59,7 @@ const About = () => {
         <li>
           <a
             href="https://open.uom.lk/lms/mod/customcert/verify_certificate.php?contextid=4776&code=kcsp4kXOAk&qrcode=1"
-            className="text-transparent bg-gradient-to-r from-pink-500 via-orange-500 to-yellow-500 bg-clip-text"
+            className="text-transparent bg-gradient-to-r from-lime-400 via-lime-300 to-lime-200 bg-clip-text"
             target="_blank"
           >
             Python for Beginner
@@ -69,7 +69,7 @@ const About = () => {
         <li>
           <a
             href="https://open.uom.lk/lms/mod/customcert/verify_certificate.php?code=4Qk4sVWQpp"
-            className="text-transparent bg-gradient-to-r from-pink-500 via-orange-500 to-yellow-500 bg-clip-text"
+            className="text-transparent bg-gradient-to-r from-lime-400 via-lime-300 to-lime-200 bg-clip-text"
             target="_blank"
           >
             Frontend Web Development
@@ -79,7 +79,7 @@ const About = () => {
         <li>
           <a
             href="https://open.uom.lk/lms/mod/customcert/verify_certificate.php?code=ooRriETAC1"
-            className="text-transparent bg-gradient-to-r from-pink-500 via-orange-500 to-yellow-500 bg-clip-text"
+            className="text-transparent bg-gradient-to-r from-lime-400 via-lime-300 to-lime-200 bg-clip-text"
             target="_blank"
           >
             Web Design for Beginner
@@ -89,7 +89,7 @@ const About = () => {
         <li>
           <a
             href="https://badgr.com/public/assertions/RxZSosLjRKK2jkcPuRJt7g?identity__email=mchanuka72@gmail.com"
-            className="text-transparent bg-gradient-to-r from-pink-500 via-orange-500 to-yellow-500 bg-clip-text"
+            className="text-transparent bg-gradient-to-r from-lime-400 via-lime-300 to-lime-200 bg-clip-text"
             target="_blank"
           >
             API Fundamentals Student Expert
@@ -140,7 +140,7 @@ const About = () => {
                       >
                         {section}
                         <span
-                          className={`absolute bottom-0 left-0 w-full h-1.5 bg-gradient-to-r from-pink-500 via-orange-500 to-yellow-500 origin-left transform transition-transform duration-300 ease-in-out ${
+                          className={`absolute bottom-0 left-0 w-full h-1.5 bg-gradient-to-r from-lime-600 via-lime-500 to-lime-400 origin-left transform transition-transform duration-300 ease-in-out ${
                             activeSection === section
                               ? "scale-x-100"
                               : "scale-x-0"

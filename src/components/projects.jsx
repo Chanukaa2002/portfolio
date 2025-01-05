@@ -16,7 +16,7 @@ const Project = () => {
                 <div className="p-4 bg-gray-800 rounded-lg">
                   <p className="relative inline-block text-xl font-bold">
                     Twitter Backend clone
-                    <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-pink-500 via-orange-500 to-yellow-500 "></div>
+                    <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-lime-600 via-lime-500 to-lime-400"></div>
                   </p>
                   <br />
                   <p className="pt-5">
@@ -33,7 +33,7 @@ const Project = () => {
                       href="https://github.com/Chanukaa2002/twitter_clone"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-3 transition-transform transform rounded-full bg-gradient-to-r from-pink-500 via-orange-500 to-yellow-500 hover:scale-90"
+                      className="p-3 transition-transform transform rounded-full bg-gradient-to-r from-lime-600 via-lime-500 to-lime-400 hover:scale-90"
                     >
                       <i className="text-2xl text-white fas fa-code"></i>
                     </a>
@@ -44,7 +44,7 @@ const Project = () => {
                 <div className="p-4 bg-gray-800 rounded-lg">
                   <p className="relative inline-block text-xl font-bold">
                     FullStack E-Commerce Webapp
-                    <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-pink-500 via-orange-500 to-yellow-500 "></div>
+                    <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-lime-600 via-lime-500 to-lime-400 "></div>
                   </p>
                   <br />
                   <p className="pt-5">
@@ -62,7 +62,7 @@ const Project = () => {
                       href="https://github.com/Chanukaa2002/e-comz"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-3 mr-5 transition-transform transform rounded-full bg-gradient-to-r from-pink-500 via-orange-500 to-yellow-500 hover:scale-90"
+                      className="p-3 mr-5 transition-transform transform rounded-full bg-gradient-to-r from-lime-600 via-lime-500 to-lime-400 hover:scale-90"
                     >
                       <i className="text-2xl text-white fas fa-code"></i>
                     </a>
@@ -70,7 +70,7 @@ const Project = () => {
                       href="https://e-com-p2zo.onrender.com/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-3 px-4 transition-transform transform rounded-full bg-gradient-to-r from-pink-500 via-orange-500 to-yellow-500 hover:scale-90"
+                      className="p-3 px-4 transition-transform transform rounded-full bg-gradient-to-r from-lime-600 via-lime-500 to-lime-400 hover:scale-90"
                     >
                       <i className="text-2xl text-white fa-solid fa-globe"></i>
                     </a>
@@ -81,7 +81,7 @@ const Project = () => {
                 <div className="p-4 bg-gray-800 rounded-lg">
                   <p className="relative inline-block text-xl font-bold">
                     Portfolio Website
-                    <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-pink-500 via-orange-500 to-yellow-500 "></div>
+                    <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-lime-600 via-lime-500 to-lime-400 "></div>
                   </p>
                   <br />
                   <p className="pt-5">
@@ -98,15 +98,15 @@ const Project = () => {
                       href="https://github.com/Chanukaa2002/portfolio"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-3 mr-5 transition-transform transform rounded-full bg-gradient-to-r from-pink-500 via-orange-500 to-yellow-500 hover:scale-90"
+                      className="p-3 mr-5 transition-transform transform rounded-full bg-gradient-to-r from-lime-600 via-lime-500 to-lime-400 hover:scale-90"
                     >
                       <i className="text-2xl text-white fas fa-code"></i>
                     </a>
                     <a
-                      href=""
+                      href="https://www.chanukadilshan.live"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-3 px-4 transition-transform transform rounded-full bg-gradient-to-r from-pink-500 via-orange-500 to-yellow-500 hover:scale-90"
+                      className="p-3 px-4 transition-transform transform rounded-full bg-gradient-to-r from-lime-600 via-lime-500 to-lime-400 hover:scale-90"
                     >
                       <i className="text-2xl text-white fa-solid fa-globe"></i>
                     </a>
@@ -117,7 +117,7 @@ const Project = () => {
                 <div className="p-4 bg-gray-800 rounded-lg">
                   <p className="relative inline-block text-xl font-bold">
                     Weather API
-                    <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-pink-500 via-orange-500 to-yellow-500 "></div>
+                    <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-lime-600 via-lime-500 to-lime-400 "></div>
                   </p>
                   <br />
                   <p className="pt-5">
@@ -134,7 +134,7 @@ const Project = () => {
                       href="https://github.com/Chanukaa2002/wether_api"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-3 mr-5 transition-transform transform rounded-full bg-gradient-to-r from-pink-500 via-orange-500 to-yellow-500 hover:scale-90"
+                      className="p-3 mr-5 transition-transform transform rounded-full bg-gradient-to-r from-lime-600 via-lime-500 to-lime-400 hover:scale-90"
                     >
                       <i className="text-2xl text-white fas fa-code"></i>
                     </a>
@@ -142,7 +142,7 @@ const Project = () => {
                       href="https://checkweather-pzv3.onrender.com/api/weather/galle"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-3 px-4 transition-transform transform rounded-full bg-gradient-to-r from-pink-500 via-orange-500 to-yellow-500 hover:scale-90"
+                      className="p-3 px-4 transition-transform transform rounded-full bg-gradient-to-r from-lime-600 via-lime-500 to-lime-400 hover:scale-90"
                     >
                       <i className="text-2xl text-white fa-solid fa-globe"></i>
                     </a>
@@ -153,7 +153,7 @@ const Project = () => {
                 <div className="p-4 bg-gray-800 rounded-lg">
                   <p className="relative inline-block text-xl font-bold">
                     Rock and Mine Sonar Prediction
-                    <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-pink-500 via-orange-500 to-yellow-500 "></div>
+                    <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-lime-600 via-lime-500 to-lime-400 "></div>
                   </p>
                   <br />
                   <p className="pt-5">
@@ -171,7 +171,7 @@ const Project = () => {
                       href="https://github.com/Chanukaa2002/Rock-vs-Mine-Prediction-using-Machine-Learning"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-3 mr-5 transition-transform transform rounded-full bg-gradient-to-r from-pink-500 via-orange-500 to-yellow-500 hover:scale-90"
+                      className="p-3 mr-5 transition-transform transform rounded-full bg-gradient-to-r from-lime-600 via-lime-500 to-lime-400 hover:scale-90"
                     >
                       <i className="text-2xl text-white fas fa-code"></i>
                     </a>
@@ -182,7 +182,7 @@ const Project = () => {
                 <div className="p-4 bg-gray-800 rounded-lg">
                   <p className="relative inline-block text-xl font-bold">
                     SoundWave (Music app)
-                    <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-pink-500 via-orange-500 to-yellow-500 "></div>
+                    <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-lime-600 via-lime-500 to-lime-400 "></div>
                   </p>
                   <br />
                   <p className="pt-5">
@@ -199,7 +199,7 @@ const Project = () => {
                       href="https://github.com/Chanukaa2002/SoundWave-ead-cw"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-3 mr-5 transition-transform transform rounded-full bg-gradient-to-r from-pink-500 via-orange-500 to-yellow-500 hover:scale-90"
+                      className="p-3 mr-5 transition-transform transform rounded-full bg-gradient-to-r from-lime-600 via-lime-500 to-lime-400 hover:scale-90"
                     >
                       <i className="text-2xl text-white fas fa-code"></i>
                     </a>
@@ -210,7 +210,7 @@ const Project = () => {
                 <div className="p-4 bg-gray-800 rounded-lg">
                   <p className="relative inline-block text-xl font-bold">
                     StudentBots
-                    <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-pink-500 via-orange-500 to-yellow-500"></div>
+                    <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-lime-600 via-lime-500 to-lime-400"></div>
                   </p>
                   <br />
                   <p className="pt-5">
@@ -227,7 +227,7 @@ const Project = () => {
                       href="https://github.com/Chanukaa2002/Student_Bots"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-3 mr-5 transition-transform transform rounded-full bg-gradient-to-r from-pink-500 via-orange-500 to-yellow-500 hover:scale-90"
+                      className="p-3 mr-5 transition-transform transform rounded-full bg-gradient-to-r from-lime-600 via-lime-500 to-lime-400 hover:scale-90"
                     >
                       <i className="text-2xl text-white fas fa-code"></i>
                     </a>
