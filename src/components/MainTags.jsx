@@ -28,7 +28,7 @@ function MainTags() {
 
   return (
     <ScrollRevealComponent>
-      <div className="flex flex-col items-center justify-center h-screen px-4 text-center md:text-left md:items-start md:px-16 lg:px-32 md:py-1">
+      <div className="flex flex-col items-center justify-center px-4 text-center md:text-left md:items-start md:px-16 lg:px-32 md:py-1">
         {/* Dynamic Text */}
         <div>
           <h1 className="text-3xl font-bold text-white sm:text-4xl md:text-6xl lg:text-6xl">

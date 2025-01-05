@@ -38,14 +38,17 @@ function App() {
       <div className="absolute inset-0 stars -z-10" />
       <NavBar />
       {/* Flex container for ProfilePicture and MainTags */}
-      <div className="flex flex-col items-center justify-center space-y-1 md:flex-row md:space-y-0 md:space-x-8">
-        <div className="pr-28">
+      <div className="flex flex-col items-center md:flex-row md:space-x-8 md:items-start md:mt-20">
+        <div className="pr-28 md:mt-20">
           <ProfilePicture />
         </div>
-        <div>
+        <div className="-mt-0 md:mt-32">
+          {" "}
+          {/* Added negative margin-top */}
           <MainTags />
         </div>
       </div>
+      <div className="-mt-20 md:mt-32"> </div>
 
       <About />
       <Project />
