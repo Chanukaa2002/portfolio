@@ -18,7 +18,7 @@ function App() {
 
   const createStars = () => {
     const starContainer = document.querySelector(".stars");
-    const numberOfStars = 250;
+    const numberOfStars = 100;
 
     // Create star elements
     for (let i = 0; i < numberOfStars; i++) {
@@ -26,8 +26,8 @@ function App() {
       star.classList.add("star");
       star.style.top = `${Math.random() * 100}vh`;
       star.style.left = `${Math.random() * 99}vw`; // Limit max width slightly to avoid overflow
-      star.style.animationDuration = `${Math.random() * 5 + 2}s`;
-      star.style.animationDelay = `${Math.random() * 5}s`;
+      star.style.animationDuration = `${Math.random() * 10 + 2}s`;
+      star.style.animationDelay = `${Math.random() * 10}s`;
 
       starContainer.appendChild(star);
     }
@@ -38,6 +38,11 @@ function App() {
       <div className="absolute inset-0 stars -z-10" />
       <NavBar />
       {/* Flex container for ProfilePicture and MainTags */}
+
+
+      {/* Apply glass effect to About, Project, and Contact sections */}
+
+      <div className="p-6 glass-effect">
       <div className="flex flex-col items-center md:flex-row md:space-x-8 md:items-start md:mt-20">
         <div className="pr-28 md:mt-20">
           <ProfilePicture />
@@ -49,11 +54,11 @@ function App() {
         </div>
       </div>
       <div className="-mt-20 md:mt-32"> </div>
-
-      <About />
-      <Project />
-      <Contact />
-      <Footer />
+        <About />
+        <Project />
+        <Contact />
+        <Footer />
+      </div>
     </>
   );
 }

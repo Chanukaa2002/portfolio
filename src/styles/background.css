@@ -12,9 +12,9 @@
 
 .star {
   position: absolute;
-  width: 2px;
-  height: 2px;
-  background-color: rgb(249, 242, 205);
+  width: 25px;
+  height: 25px;
+  background-color: rgb(81, 255, 130);
   border-radius: 50%;
   animation: moveStars linear infinite;
 }
@@ -41,4 +41,13 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+}
+
+/* Glass effect */
+.glass-effect {
+  background: #1d1b1ba9; 
+  backdrop-filter: blur(3.5px);
+  border-radius: 10px; 
+  border: 1px solid #1a1a1a; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
