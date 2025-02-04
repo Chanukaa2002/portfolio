@@ -18,7 +18,7 @@ function App() {
 
   const createStars = () => {
     const starContainer = document.querySelector(".stars");
-    const numberOfStars = 100;
+    const numberOfStars = 25;
 
     // Create star elements
     for (let i = 0; i < numberOfStars; i++) {
@@ -35,7 +35,7 @@ function App() {
 
   return (
     <>
-      <div className="absolute inset-0 stars -z-10" />
+      <div className="absolute inset-0 stars -z-10 " />
       <NavBar />
       {/* Flex container for ProfilePicture and MainTags */}
 

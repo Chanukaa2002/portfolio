@@ -2,31 +2,47 @@ import React, { useState } from "react";
 import ScrollRevealComponent from "../utils/ScrollRevealComponent";
 
 const About = () => {
-  // Set default active section to "Skills"
+  // Set default active section to "Educations"
   const [activeSection, setActiveSection] = useState("Educations");
 
   const handleSectionClick = (section) => {
     setActiveSection(section);
   };
 
+  const skills = [
+    { name: "Node.js", icon: "nodejs" },
+    { name: "Express", icon: "express" },
+    { name: "MongoDB", icon: "mongodb" },
+    { name: "PHP", icon: "php" },
+    { name: "MySQL", icon: "mysql" },
+    { name: ".NET", icon: "dotnet" },
+    { name: "REST API", icon: "htmx" },
+    { name: "Jest", icon: "jest" },
+    { name: "Postman", icon: "postman" },
+    { name: "Docker", icon: "docker" },
+    { name: "Git", icon: "git" },
+    { name: "GitHub", icon: "github" },
+    { name: "JavaScript", icon: "javascript" },
+    { name: "HTML5", icon: "html" },
+    { name: "CSS3", icon: "css" },
+    { name: "React", icon: "react" },
+  ];
   // Lists for each section
   const skillsList = (
-    <div className="flex justify-center space-x-4 text-left sm:space-x-10">
-      <ul className="pl-6 text-base list-disc sm:text-xl">
-        <li>Node.js</li>
-        <li>Express</li>
-        <li>MongoDB</li>
-        <li>SQL</li>
-        <li>Postman</li>
-        <li>PHP</li>
-      </ul>
-      <ul className="pl-6 text-base list-disc sm:text-xl ">
-        <li>.NET</li>
-        <li>Docker</li>
-        <li>React JS</li>
-        <li>API Development</li>
-        <li>Git and GitHub</li>
-      </ul>
+    <div className="grid grid-cols-2 gap-4 p-4 sm:grid-cols-3 md:grid-cols-4">
+      {skills.map((skill, index) => (
+        <div
+          key={index}
+          className="flex items-center p-2 space-x-1 text-sm border rounded-lg shadow-lg backdrop-blur-md bg-white/5 border-white/20"
+        >
+          <img
+            src={`https://skillicons.dev/icons?i=${skill.icon}`}
+            alt={skill.name}
+            className="w-4 h-4"
+          />
+          <span className="pl-4 font-bold text-white">{skill.name}</span>
+        </div>
+      ))}
     </div>
   );
 
@@ -101,11 +117,11 @@ const About = () => {
   );
 
   return (
-    <ScrollRevealComponent>
+    <>
       <section id="about" className="h-screen">
-        <div className="pb-10 text-center text-white pt-28">
+        <div className="pb-10 text-center text-white pt-28 ">
           <p className="pb-3 text-3xl font-bold sm:text-4xl">About Me</p>
-          <div className="flex items-center justify-center">
+          <div className="flex items-center justify-center ">
             <div className="w-11/12 text-center sm:w-2/3">
               <p className="text-base text-justify sm:text-xl">
                 Hello! I'm a 22-year-old backend developer, a current
@@ -129,23 +145,20 @@ const About = () => {
           </div>
           <div className="flex items-center justify-center">
             <div className="w-full px-4 pt-10 md:w-1/2">
-              <div className="p-4 bg-gray-800 rounded-lg">
+              <div className="p-2 border rounded-lg shadow-lg backdrop-blur-sm bg-white/5 border-white/20">
                 <div className="flex justify-center pt-5 space-x-6 text-lg sm:space-x-10 sm:text-2xl">
                   {["Educations", "Skills", "Certifications"].map(
                     (section, index) => (
                       <div
                         key={index}
                         onClick={() => handleSectionClick(section)}
-                        className="relative overflow-hidden cursor-pointer group"
+                        className={`relative overflow-hidden cursor-pointer font-bold group px-4 py-2 rounded-lg transition-colors duration-300 ${
+                          activeSection === section
+                            ? "bg-lime-400 text-black"
+                            : "text-white"
+                        }`}
                       >
                         {section}
-                        <span
-                          className={`absolute bottom-0 left-0 w-full h-1.5 bg-gradient-to-r from-lime-600 via-lime-500 to-lime-400 origin-left transform transition-transform duration-300 ease-in-out ${
-                            activeSection === section
-                              ? "scale-x-100"
-                              : "scale-x-0"
-                          }`}
-                        />
                       </div>
                     )
                   )}
@@ -172,7 +185,7 @@ const About = () => {
           </div>
         </div>
       </section>
-    </ScrollRevealComponent>
+    </>
   );
 };
 

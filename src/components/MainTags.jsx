@@ -50,7 +50,7 @@ function MainTags() {
             href="https://drive.google.com/uc?export=download&id=1qpo0LgXjKEyfzn1HKywKZJXXyhj1cnOO"
             download
           >
-            <button className="px-6 py-2 mt-4 font-bold text-white rounded-full bg-gradient-to-r from-lime-600 via-lime-500 to-lime-400 hover:bg-gradient-to-r hover:from-lime-600 hover:via-lime-500 hover:to-lime-300">
+            <button className="px-6 py-2 mt-4 font-bold text-black rounded-full bg-gradient-to-r from-lime-600 via-lime-500 to-lime-400 hover:bg-gradient-to-r hover:from-lime-600 hover:via-lime-500 hover:to-lime-300">
               Download CV
             </button>
           </a>

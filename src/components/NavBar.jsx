@@ -1,16 +1,14 @@
 import React, { useState } from "react";
 import { Link } from "react-scroll";
-// import { Link as RL } from "react-router-dom";
-// import {  useNavigate } from "react-router-dom";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 
 const NavBar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  // const navigate = useNavigate()
 
   return (
     <div>
-      <nav className="fixed top-0 left-0 right-0 z-50 w-full px-4 mx-auto mt-2 bg-transparent rounded-full sm:bg-gray-700 sm:w-10/12 md:w-8/12 lg:w-6/12 xl:w-4/12">
+      {/* Navbar with Glass Effect */}
+      <nav className="fixed top-0 left-0 right-0 z-50 w-full px-4 mx-auto mt-2 border rounded-full shadow-lg backdrop-blur-md bg-white/5 border-white/20 sm:w-10/12 md:w-8/12 lg:w-6/12 xl:w-4/12">
         <div className="flex items-center justify-between px-4 py-4 mx-auto max-w-7xl">
           {/* Mobile Menu Toggle (Hamburger) */}
           <div className="sm:hidden">
@@ -33,7 +31,7 @@ const NavBar = () => {
                 to="about"
                 smooth={true}
                 duration={1250}
-                className="px-3 py-2 text-sm font-medium text-gray-300 rounded-md cursor-pointer hover:bg-gray-600 hover:text-white"
+                className="px-3 py-2 text-sm font-bold text-gray-300 rounded-md cursor-pointer hover:bg-lime-400 hover:text-black "
               >
                 About
               </Link>
@@ -41,7 +39,7 @@ const NavBar = () => {
                 to="project"
                 smooth={true}
                 duration={1250}
-                className="px-3 py-2 text-sm font-medium text-gray-300 rounded-md cursor-pointer hover:bg-gray-600 hover:text-white"
+                className="px-3 py-2 text-sm font-bold text-gray-300 rounded-md cursor-pointer hover:bg-lime-400 hover:text-black"
               >
                 Project
               </Link>
@@ -49,23 +47,17 @@ const NavBar = () => {
                 to="contact"
                 smooth={true}
                 duration={1250}
-                className="px-3 py-2 text-sm font-medium text-gray-300 rounded-md cursor-pointer hover:bg-gray-600 hover:text-white"
+                className="px-3 py-2 text-sm font-bold text-gray-300 rounded-md cursor-pointer hover:bg-lime-400 hover:text-black"
               >
                 Contact
               </Link>
-              {/* <RL
-                className="px-3 py-2 text-sm font-medium text-gray-300 rounded-md cursor-pointer hover:bg-gray-600 hover:text-white"
-                to="/blog"
-              >
-                Blog
-              </RL> */}
             </div>
           </div>
         </div>
 
-        {/* Mobile Menu */}
+        {/* Mobile Menu with Glass Effect */}
         {isMobileMenuOpen && (
-          <div className="fixed top-0 left-0 flex flex-col items-center justify-center w-full h-screen space-y-4 bg-gray-800 sm:hidden">
+          <div className="fixed top-0 left-0 flex flex-col items-center justify-center w-full h-screen space-y-4 border shadow-lg backdrop-blur-md bg-white/5 border-white/20 sm:hidden">
             <button
               onClick={() => setIsMobileMenuOpen(false)}
               className="absolute text-xl text-gray-300 focus:outline-none top-4 right-4"
@@ -77,7 +69,7 @@ const NavBar = () => {
               smooth={true}
               duration={500}
               onClick={() => setIsMobileMenuOpen(false)}
-              className="p-2 text-lg font-medium text-gray-300 rounded-md hover:bg-gray-600 hover:text-white"
+              className="p-2 text-lg font-bold text-gray-300 rounded-md hover:bg-lime-400 hover:text-black"
             >
               About
             </Link>
@@ -86,7 +78,7 @@ const NavBar = () => {
               smooth={true}
               duration={500}
               onClick={() => setIsMobileMenuOpen(false)}
-              className="p-2 text-lg font-medium text-gray-300 rounded-md hover:bg-gray-600 hover:text-white"
+              className="p-2 text-lg font-bold text-gray-300 rounded-md hover:bg-lime-400 hover:text-black"
             >
               Project
             </Link>
@@ -95,17 +87,10 @@ const NavBar = () => {
               smooth={true}
               duration={500}
               onClick={() => setIsMobileMenuOpen(false)}
-              className="p-2 text-lg font-medium text-gray-300 rounded-md hover:bg-gray-600 hover:text-white"
+              className="p-2 text-lg font-bold text-gray-300 rounded-md hover:bg-lime-400 hover:text-black"
             >
               Contact
             </Link>
-            {/* <NavLink
-              to="/blog"
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="p-2 text-lg font-medium text-gray-300 rounded-md hover:bg-gray-600 hover:text-white"
-            >
-              Blog
-            </NavLink> */}
           </div>
         )}
       </nav>

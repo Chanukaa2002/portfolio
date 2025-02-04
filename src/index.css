@@ -11,3 +11,15 @@ html {
   overflow-x: hidden; /* Disable horizontal scrolling */
   width: 100%; /* Ensure full-width layout */
 }
+
+.shadow-glow {
+  box-shadow: 0 0 8px 1px rgba(132, 204, 22, 0.6); /* Lime green glow */
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+  backdrop-filter: blur(10px); /* Blur effect */
+  border-radius: 10px; /* Rounded corners */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Light border */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
