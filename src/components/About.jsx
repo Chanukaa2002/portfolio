@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -6,6 +6,7 @@ import { Pagination } from "swiper/modules";
 
 const About = () => {
   const [activeSection, setActiveSection] = useState("Educations");
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   const handleSectionClick = (section) => {
     setActiveSection(section);
@@ -30,9 +31,18 @@ const About = () => {
     { name: "React", icon: "react" },
   ];
 
-  const skillsList = (
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const skillsList = isMobile ? (
     <Swiper
-      slidesPerView={1} // Number of columns (2 tags in x-axis)
+      slidesPerView={1}
       spaceBetween={9}
       pagination={{
         clickable: true,
@@ -60,6 +70,22 @@ const About = () => {
         </SwiperSlide>
       ))}
     </Swiper>
+  ) : (
+    <div className="grid grid-cols-4 gap-4 p-4">
+      {skills.map((skill, index) => (
+        <div
+          key={index}
+          className="flex items-center p-2 space-x-1 text-sm border rounded-lg shadow-lg backdrop-blur-md bg-white/5 border-white/20"
+        >
+          <img
+            src={`https://skillicons.dev/icons?i=${skill.icon}`}
+            alt={skill.name}
+            className="w-4 h-4"
+          />
+          <span className="pl-4 font-bold text-white">{skill.name}</span>
+        </div>
+      ))}
+    </div>
   );
 
   // Rest of the code remains the same...
