@@ -57,7 +57,7 @@ const NavBar = () => {
 
         {/* Mobile Menu with Glass Effect */}
         {isMobileMenuOpen && (
-          <div className="fixed top-0 left-0 flex flex-col items-center justify-center w-full h-screen space-y-4 border shadow-lg backdrop-blur-md bg-white/5 border-white/20 sm:hidden">
+          <div className="fixed top-0 left-0 flex flex-col items-center justify-center w-full h-screen space-y-4 border shadow-lg backdrop-blur-md bg-white/20 border-white/20 sm:hidden">
             <button
               onClick={() => setIsMobileMenuOpen(false)}
               className="absolute text-xl text-gray-300 focus:outline-none top-4 right-4"

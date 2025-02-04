@@ -1,8 +1,10 @@
 import React, { useState } from "react";
-import ScrollRevealComponent from "../utils/ScrollRevealComponent";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import { Pagination } from "swiper/modules";
 
 const About = () => {
-  // Set default active section to "Educations"
   const [activeSection, setActiveSection] = useState("Educations");
 
   const handleSectionClick = (section) => {
@@ -27,25 +29,40 @@ const About = () => {
     { name: "CSS3", icon: "css" },
     { name: "React", icon: "react" },
   ];
-  // Lists for each section
+
   const skillsList = (
-    <div className="grid grid-cols-2 gap-4 p-4 sm:grid-cols-3 md:grid-cols-4">
-      {skills.map((skill, index) => (
-        <div
-          key={index}
-          className="flex items-center p-2 space-x-1 text-sm border rounded-lg shadow-lg backdrop-blur-md bg-white/5 border-white/20"
-        >
-          <img
-            src={`https://skillicons.dev/icons?i=${skill.icon}`}
-            alt={skill.name}
-            className="w-4 h-4"
-          />
-          <span className="pl-4 font-bold text-white">{skill.name}</span>
-        </div>
+    <Swiper
+      slidesPerView={1} // Number of columns (2 tags in x-axis)
+      spaceBetween={9}
+      pagination={{
+        clickable: true,
+      }}
+      modules={[Pagination]}
+      className="mySwiper"
+    >
+      {[...Array(Math.ceil(skills.length / 6))].map((_, slideIndex) => (
+        <SwiperSlide key={slideIndex}>
+          <div className="grid grid-cols-2 gap-4 p-4">
+            {skills.slice(slideIndex * 6, (slideIndex + 1) * 6).map((skill, index) => (
+              <div
+                key={index}
+                className="flex items-center p-2 space-x-1 text-sm border rounded-lg shadow-lg backdrop-blur-md bg-white/5 border-white/20"
+              >
+                <img
+                  src={`https://skillicons.dev/icons?i=${skill.icon}`}
+                  alt={skill.name}
+                  className="w-4 h-4"
+                />
+                <span className="pl-4 font-bold text-white">{skill.name}</span>
+              </div>
+            ))}
+          </div>
+        </SwiperSlide>
       ))}
-    </div>
+    </Swiper>
   );
 
+  // Rest of the code remains the same...
   const educationsList = (
     <div className="flex justify-center">
       <ul className="text-base text-left list-disc sm:text-xl">
