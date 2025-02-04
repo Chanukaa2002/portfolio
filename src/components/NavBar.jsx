@@ -12,16 +12,17 @@ const NavBar = () => {
         <div className="flex items-center justify-between px-4 py-4 mx-auto max-w-7xl">
           {/* Mobile Menu Toggle (Hamburger) */}
           <div className="sm:hidden">
-            <button
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-gray-300 focus:outline-none"
+            <div
+              // onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="justify-center text-xs text-center text-gray-300 focus:outline-none"
             >
-              {isMobileMenuOpen ? (
+              Welcome to the Portfolio
+              {/* {isMobileMenuOpen ? (
                 <AiOutlineClose size={24} />
               ) : (
                 <AiOutlineMenu size={24} />
-              )}
-            </button>
+              )} */}
+            </div>
           </div>
 
           {/* Desktop Menu */}
