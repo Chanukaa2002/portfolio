@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import ScrollRevealComponent from "../utils/ScrollRevealComponent";
 
 // Import images
@@ -9,102 +9,145 @@ import weatherImage from "../assets/weatherImage.png";
 import mlImage from "../assets/commingSoonImage.png";
 import soundwaveImage from "../assets/soundwaveImage.png";
 import studentbotsImage from "../assets/studentbotImage.png";
+import NIBMEvexImage from "../assets/commingSoonImage.png";
 
 const Project = () => {
+  const [activeFilter, setActiveFilter] = useState("All");
+
+  const projects = [
+    {
+      id: 1,
+      title: "Twitter Backend Clone",
+      image: twitterImage,
+      description: "This is a backend clone of the Twitter app.",
+      tags: ["Node.js", "Express", "MongoDB", "JSON Web Token", "Postman"],
+      github: "https://github.com/Chanukaa2002/twitter_clone",
+      type: ["Web"], // Changed to an array
+    },
+    {
+      id: 2,
+      title: "FullStack E-Commerce Webapp",
+      image: ecommerceImage,
+      description: "This is a simple e-commerce webapp that can create, update, and delete products.",
+      tags: ["Node.js", "Express", "MongoDB", "React JS", "Tailwind CSS", "Postman"],
+      github: "https://github.com/Chanukaa2002/e-comz",
+      demo: "https://e-com-p2zo.onrender.com/",
+      type: ["Web"], // Changed to an array
+    },
+    {
+      id: 3,
+      title: "Portfolio Website",
+      image: portfolioImage,
+      description: "This is my portfolio website showcasing my skills and projects.",
+      tags: ["React JS", "Tailwind CSS"],
+      github: "https://github.com/Chanukaa2002/portfolio",
+      demo: "https://www.chanukadilshan.live",
+      type: ["Web"], // Changed to an array
+    },
+    {
+      id: 4,
+      title: "Weather API",
+      image: weatherImage,
+      description: "This is a Simple Weather API that can check the current weather by city.",
+      tags: ["Node.js", "Express", "MongoDB", "Postman", "Redis"],
+      github: "https://github.com/Chanukaa2002/wether_api",
+      demo: "https://weather-check-pearl-xi.vercel.app/",
+      type: ["Web"], // Changed to an array
+    },
+    {
+      id: 5,
+      title: "Rock and Mine Sonar Prediction",
+      image: mlImage,
+      description: "This is a Simple Machine Learning model to predict rock and mines in the deep sea.",
+      tags: ["Python", "Numpy", "Pandas", "Seaborn", "Jupyter Notebook"],
+      github: "https://github.com/Chanukaa2002/Rock-vs-Mine-Prediction-using-Machine-Learning",
+      type: ["Web"], // Changed to an array
+    },
+    {
+      id: 6,
+      title: "SoundWave (Music app)",
+      image: soundwaveImage,
+      description: "This is a Music listening and uploading application created for a University project.",
+      tags: ["Java", "Java Swing", "MySQL"],
+      github: "https://github.com/Chanukaa2002/SoundWave-ead-cw",
+      type: ["Windows"], // Changed to an array
+    },
+    {
+      id: 7,
+      title: "StudentBots",
+      image: studentbotsImage,
+      description: "This is a School Management system, created for a University project.",
+      tags: ["C#", ".NET", "MySQL"],
+      github: "https://github.com/Chanukaa2002/Student_Bots",
+      type: ["Windows"], // Changed to an array
+    },
+    {
+      id:8,
+      title: "NIBMEvex",
+      image: NIBMEvexImage,
+      description: "This is a Event managment system, Contributed for a University project",
+      tags: ["Java", "Springboot", "MySQL", "AWS", "BCrypt", "Swagger","Github Actions"],
+      github: "https://github.com/Chanukaa2002/EAD2-Backend",
+      type: ["Web","Contribution"],
+    }
+  ];
+
+  const filteredProjects = activeFilter === "All" 
+    ? projects 
+    : projects.filter(project => project.type.includes(activeFilter));
+
   return (
     <>
-      <>
-        <section id="project">
-          <div className="pt-56 pb-10 text-center text-white">
-            <p className="pb-10 text-4xl font-bold">Projects</p>
-            <div className="flex items-center justify-center">
-              <div className="w-full px-4 md:w-3/4">
-                {/* Use responsive grid classes */}
-                <div className="grid grid-cols-1 gap-6 text-center sm:grid-cols-2 lg:grid-cols-3">
-                  {/* Twitter project */}
-                  <div className="p-2 border rounded-lg shadow-lg backdrop-blur-sm bg-white/5 border-white/20">
+      <section id="project">
+        <div className="pt-56 pb-10 text-center text-white">
+          <p className="pb-10 text-4xl font-bold">Projects</p>
+          <div className="flex flex-wrap justify-center gap-4 mb-10">
+            
+            {["All", "Web", "Windows", "Contribution"].map((filter) => (
+              <button
+                key={filter}
+                onClick={() => setActiveFilter(filter)}
+                className={`px-6 py-2 rounded-lg shadow-lg backdrop-blur-md border font-bold border-white/20 transition-colors ${
+                  activeFilter === filter
+                    ? "bg-lime-400 text-black"
+                    : "bg-white/5 text-white"
+                }`}
+              >
+                {filter}
+              </button>
+            ))}
+          </div>
+          <div className="flex items-center justify-center">
+            <div className="w-full px-4 md:w-3/4">
+              <div className="grid grid-cols-1 gap-6 text-center sm:grid-cols-2 lg:grid-cols-3">
+                {filteredProjects.map((project) => (
+                  <div key={project.id} className="p-2 border rounded-lg shadow-lg backdrop-blur-sm bg-white/5 border-white/20">
                     <img
-                      src={twitterImage}
-                      alt="Twitter Backend Clone"
+                      src={project.image}
+                      alt={project.title}
                       className="object-cover w-full h-48 rounded-t-lg"
                     />
                     <p className="inline-block mt-4 text-xl font-bold">
-                      Twitter Backend clone
-                    </p>
-                    <br />
-                    <p className="pt-5 text-lg text-gray-400" >
-                      This is a backend clone of the Twitter app.
-                    </p>
-                    <br />
-                    <div className="flex flex-wrap gap-2 pt-4">
-                      <span class=" text-sm font-semibold rounded-full  text-lime-400  me-2 px-2.5 py-0.5   dark:text-lime-400 border-solid border border-lime-400 shadow-lg  backdrop-blur-sm bg-white/5 border-white/20">
-                        Node.js
-                      </span>
-                      <span class=" text-sm font-semibold rounded-full  text-lime-400  me-2 px-2.5 py-0.5   dark:text-lime-400 border-solid border border-lime-400 shadow-lg  backdrop-blur-sm bg-white/5 border-white/20">
-                        Express
-                      </span>
-                      <span class=" text-sm font-semibold rounded-full  text-lime-400  me-2 px-2.5 py-0.5   dark:text-lime-400 border-solid border border-lime-400 shadow-lg  backdrop-blur-sm bg-white/5 border-white/20">
-                        MongoDB
-                      </span>
-                      <span class=" text-sm font-semibold rounded-full  text-lime-400  me-2 px-2.5 py-0.5   dark:text-lime-400 border-solid border border-lime-400 shadow-lg  backdrop-blur-sm bg-white/5 border-white/20">
-                        JSON Web Token
-                      </span>
-                      <span class=" text-sm font-semibold rounded-full  text-lime-400  me-2 px-2.5 py-0.5   dark:text-lime-400 border-solid border border-lime-400 shadow-lg  backdrop-blur-sm bg-white/5 border-white/20">
-                        Postman
-                      </span>
-                    </div>
-                    <div className="flex justify-center pt-4 space-x-4">
-                      <a
-                        href="https://github.com/Chanukaa2002/twitter_clone"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center text-white transition-colors hover:text-lime-100"
-                      >
-                        <i className="mr-2 text-xl fab fa-github"></i>
-                        <span>View Code</span>
-                      </a>
-                    </div>
-                  </div>
-
-                  {/* E-commerce project */}
-                  <div className="p-2 border rounded-lg shadow-lg backdrop-blur-sm bg-white/5 border-white/20">
-                    <img
-                      src={ecommerceImage}
-                      alt="FullStack E-Commerce Webapp"
-                      className="object-cover w-full h-48 rounded-t-lg"
-                    />
-                    <p className="inline-block mt-4 text-xl font-bold">
-                      FullStack E-Commerce Webapp
+                      {project.title}
                     </p>
                     <br />
                     <p className="pt-5 text-lg text-gray-400">
-                      This is a simple e-commerce webapp that can create,
-                      update, and delete products.
+                      {project.description}
                     </p>
                     <br />
                     <div className="flex flex-wrap gap-2 pt-4">
-                      <span class=" text-sm font-semibold rounded-full  text-lime-400  me-2 px-2.5 py-0.5   dark:text-lime-400 border-solid border border-lime-400 shadow-lg  backdrop-blur-sm bg-white/5 border-white/20">
-                        Node.js
-                      </span>
-                      <span class=" text-sm font-semibold rounded-full  text-lime-400  me-2 px-2.5 py-0.5   dark:text-lime-400 border-solid border border-lime-400 shadow-lg  backdrop-blur-sm bg-white/5 border-white/20">
-                        Express
-                      </span>
-                      <span class=" text-sm font-semibold rounded-full  text-lime-400  me-2 px-2.5 py-0.5   dark:text-lime-400 border-solid border border-lime-400 shadow-lg  backdrop-blur-sm bg-white/5 border-white/20">
-                        MongoDB
-                      </span>
-                      <span class=" text-sm font-semibold rounded-full  text-lime-400  me-2 px-2.5 py-0.5   dark:text-lime-400 border-solid border border-lime-400 shadow-lg  backdrop-blur-sm bg-white/5 border-white/20">
-                        React JS
-                      </span>
-                      <span class=" text-sm font-semibold rounded-full  text-lime-400  me-2 px-2.5 py-0.5   dark:text-lime-400 border-solid border border-lime-400 shadow-lg  backdrop-blur-sm bg-white/5 border-white/20">
-                        Tailwind CSS
-                      </span>
-                      <span class=" text-sm font-semibold rounded-full  text-lime-400  me-2 px-2.5 py-0.5   dark:text-lime-400 border-solid border border-lime-400 shadow-lg  backdrop-blur-sm bg-white/5 border-white/20">
-                        Postman
-                      </span>
+                      {project.tags.map((tag) => (
+                        <span
+                          key={tag}
+                          className="text-sm font-semibold rounded-full text-lime-400 me-2 px-2.5 py-0.5 border-solid border border-lime-400 shadow-lg backdrop-blur-sm bg-white/5 border-white/20"
+                        >
+                          {tag}
+                        </span>
+                      ))}
                     </div>
                     <div className="flex justify-center pt-4 space-x-4">
                       <a
-                        href="https://github.com/Chanukaa2002/e-comz"
+                        href={project.github}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center text-white transition-colors hover:text-lime-100"
@@ -112,253 +155,27 @@ const Project = () => {
                         <i className="mr-2 text-xl fab fa-github"></i>
                         <span>View Code</span>
                       </a>
-                      <a
-                        href="https://e-com-p2zo.onrender.com/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center text-white transition-colors hover:text-lime-100"
-                      >
-                        <i className="mr-2 text-xl fas fa-external-link-alt"></i>
-                        <span>Live Demo</span>
-                      </a>
+                      {project.demo && (
+                        <a
+                          href={project.demo}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center text-white transition-colors hover:text-lime-100"
+                        >
+                          <i className="mr-2 text-xl fas fa-external-link-alt"></i>
+                          <span>Live Demo</span>
+                        </a>
+                      )}
                     </div>
                   </div>
-
-                  {/* Portfolio project */}
-                  <div className="p-2 border rounded-lg shadow-lg backdrop-blur-sm bg-white/5 border-white/20">
-                    <img
-                      src={portfolioImage}
-                      alt="Portfolio Website"
-                      className="object-cover w-full h-48 rounded-t-lg"
-                    />
-                    <p className="inline-block mt-4 text-xl font-bold">
-                      Portfolio Website
-                    </p>
-                    <br />
-                    <p className="pt-5 text-lg text-gray-400">
-                      This is my portfolio website showcasing my skills and
-                      projects.
-                    </p>
-                    <br />
-                    <div className="flex flex-wrap gap-2 pt-4">
-                      <span class=" text-sm font-semibold rounded-full  text-lime-400  me-2 px-2.5 py-0.5   dark:text-lime-400 border-solid border border-lime-400 shadow-lg  backdrop-blur-sm bg-white/5 border-white/20">
-                        React JS
-                      </span>
-                      <span class=" text-sm font-semibold rounded-full  text-lime-400  me-2 px-2.5 py-0.5   dark:text-lime-400 border-solid border border-lime-400 shadow-lg  backdrop-blur-sm bg-white/5 border-white/20">
-                        Tailwind CSS
-                      </span>
-                    </div>
-                    <div className="flex justify-center pt-4 space-x-4">
-                      <a
-                        href="https://github.com/Chanukaa2002/portfolio"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center text-white transition-colors hover:text-lime-100"
-                      >
-                        <i className="mr-2 text-xl fab fa-github"></i>
-                        <span>View Code</span>
-                      </a>
-                      <a
-                        href="https://www.chanukadilshan.live"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center text-white transition-colors hover:text-lime-100"
-                      >
-                        <i className="mr-2 text-xl fas fa-external-link-alt"></i>
-                        <span>Live Demo</span>
-                      </a>
-                    </div>
-                  </div>
-
-                  {/* Weather project */}
-                  <div className="p-2 border rounded-lg shadow-lg backdrop-blur-sm bg-white/5 border-white/20">
-                    <img
-                      src={weatherImage}
-                      alt="Weather API"
-                      className="object-cover w-full h-48 rounded-t-lg"
-                    />
-                    <p className="inline-block mt-4 text-xl font-bold">
-                      Weather API
-                    </p>
-                    <br />
-                    <p className="pt-5 text-lg text-gray-400">
-                      This is a Simple Weather API that can check the current
-                      weather by city.
-                    </p>
-                    <br />
-                    <div className="flex flex-wrap gap-2 pt-4">
-                      <span class=" text-sm font-semibold rounded-full  text-lime-400  me-2 px-2.5 py-0.5   dark:text-lime-400 border-solid border border-lime-400 shadow-lg  backdrop-blur-sm bg-white/5 border-white/20">
-                        Node.js
-                      </span>
-                      <span class=" text-sm font-semibold rounded-full  text-lime-400  me-2 px-2.5 py-0.5   dark:text-lime-400 border-solid border border-lime-400 shadow-lg  backdrop-blur-sm bg-white/5 border-white/20">
-                        Express
-                      </span>
-                      <span class=" text-sm font-semibold rounded-full  text-lime-400  me-2 px-2.5 py-0.5   dark:text-lime-400 border-solid border border-lime-400 shadow-lg  backdrop-blur-sm bg-white/5 border-white/20">
-                        MongoDB
-                      </span>
-                      <span class=" text-sm font-semibold rounded-full  text-lime-400  me-2 px-2.5 py-0.5   dark:text-lime-400 border-solid border border-lime-400 shadow-lg  backdrop-blur-sm bg-white/5 border-white/20">
-                        Postman
-                      </span>
-                      <span class=" text-sm font-semibold rounded-full  text-lime-400  me-2 px-2.5 py-0.5   dark:text-lime-400 border-solid border border-lime-400 shadow-lg  backdrop-blur-sm bg-white/5 border-white/20">
-                        Redis
-                      </span>
-                    </div>
-                    <div className="flex justify-center pt-4 space-x-4">
-                      <a
-                        href="https://github.com/Chanukaa2002/wether_api"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center text-white transition-colors hover:text-lime-100"
-                      >
-                        <i className="mr-2 text-xl fab fa-github"></i>
-                        <span>View Code</span>
-                      </a>
-                      <a
-                        href="https://weather-check-pearl-xi.vercel.app/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center text-white transition-colors hover:text-lime-100"
-                      >
-                        <i className="mr-2 text-xl fas fa-external-link-alt"></i>
-                        <span>Live Demo</span>
-                      </a>
-                    </div>
-                  </div>
-
-                  {/* ML project */}
-                  <div className="p-2 border rounded-lg shadow-lg backdrop-blur-sm bg-white/5 border-white/20">
-                    <img
-                      src={mlImage}
-                      alt="Rock and Mine Sonar Prediction"
-                      className="object-cover w-full h-48 rounded-t-lg"
-                    />
-                    <p className="inline-block mt-4 text-xl font-bold">
-                      Rock and Mine Sonar Prediction
-                    </p>
-                    <br />
-                    <p className="pt-5 text-lg text-gray-400">
-                      This is a Simple Machine Learning model to predict rock
-                      and mines in the deep sea.
-                    </p>
-                    <br />
-                    <div className="flex flex-wrap gap-2 pt-4">
-                      <span class=" text-sm font-semibold rounded-full  text-lime-400  me-2 px-2.5 py-0.5   dark:text-lime-400 border-solid border border-lime-400 shadow-lg  backdrop-blur-sm bg-white/5 border-white/20">
-                        Python
-                      </span>
-                      <span class=" text-sm font-semibold rounded-full  text-lime-400  me-2 px-2.5 py-0.5   dark:text-lime-400 border-solid border border-lime-400 shadow-lg  backdrop-blur-sm bg-white/5 border-white/20">
-                        Numpy
-                      </span>
-                      <span class=" text-sm font-semibold rounded-full  text-lime-400  me-2 px-2.5 py-0.5   dark:text-lime-400 border-solid border border-lime-400 shadow-lg  backdrop-blur-sm bg-white/5 border-white/20">
-                        Pandas
-                      </span>
-                      <span class=" text-sm font-semibold rounded-full  text-lime-400  me-2 px-2.5 py-0.5   dark:text-lime-400 border-solid border border-lime-400 shadow-lg  backdrop-blur-sm bg-white/5 border-white/20">
-                        Seaborn
-                      </span>
-                      <span class=" text-sm font-semibold rounded-full  text-lime-400  me-2 px-2.5 py-0.5   dark:text-lime-400 border-solid border border-lime-400 shadow-lg  backdrop-blur-sm bg-white/5 border-white/20">
-                        Jupyter Notebook
-                      </span>
-                    </div>
-                    <div className="flex justify-center pt-4 space-x-4">
-                      <a
-                        href="https://github.com/Chanukaa2002/Rock-vs-Mine-Prediction-using-Machine-Learning"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center text-white transition-colors hover:text-lime-100"
-                      >
-                        <i className="mr-2 text-xl fab fa-github"></i>
-                        <span>View Code</span>
-                      </a>
-                    </div>
-                  </div>
-
-                  {/* Soundwave project */}
-                  <div className="p-2 border rounded-lg shadow-lg backdrop-blur-sm bg-white/5 border-white/20">
-                    <img
-                      src={soundwaveImage}
-                      alt="SoundWave (Music app)"
-                      className="object-cover w-full h-48 rounded-t-lg"
-                    />
-                    <p className="inline-block mt-4 text-xl font-bold">
-                      SoundWave (Music app)
-                    </p>
-                    <br />
-                    <p className="pt-5 text-lg text-gray-400">
-                      This is a Music listening and uploading application
-                      created for a University project.
-                    </p>
-                    <br />
-                    <div className="flex flex-wrap gap-2 pt-4">
-                      <span class=" text-sm font-semibold rounded-full  text-lime-400  me-2 px-2.5 py-0.5   dark:text-lime-400 border-solid border border-lime-400 shadow-lg  backdrop-blur-sm bg-white/5 border-white/20">
-                        Java
-                      </span>
-                      <span class=" text-sm font-semibold rounded-full  text-lime-400  me-2 px-2.5 py-0.5   dark:text-lime-400 border-solid border border-lime-400 shadow-lg  backdrop-blur-sm bg-white/5 border-white/20">
-                        Java Swing
-                      </span>
-                      <span class=" text-sm font-semibold rounded-full  text-lime-400  me-2 px-2.5 py-0.5   dark:text-lime-400 border-solid border border-lime-400 shadow-lg  backdrop-blur-sm bg-white/5 border-white/20">
-                        MySQL
-                      </span>
-                    </div>
-                    <div className="flex justify-center pt-4 space-x-4">
-                      <a
-                        href="https://github.com/Chanukaa2002/SoundWave-ead-cw"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center text-white transition-colors hover:text-lime-100"
-                      >
-                        <i className="mr-2 text-xl fab fa-github"></i>
-                        <span>View Code</span>
-                      </a>
-                    </div>
-                  </div>
-
-                  {/* StudentBot project */}
-                  <div className="p-2 border rounded-lg shadow-lg backdrop-blur-sm bg-white/5 border-white/20">
-                    <img
-                      src={studentbotsImage}
-                      alt="StudentBots"
-                      className="object-cover w-full h-48 rounded-t-lg "
-                    />
-                    <p className="inline-block mt-4 text-xl font-bold">
-                      StudentBots
-                    </p>
-                    <br />
-                    <p className="pt-5 text-lg text-gray-400">
-                      This is a School Management system, created for a
-                      University project.
-                    </p>
-                    <br />
-                    <div className="flex flex-wrap gap-2 pt-4">
-                      <span class="  text-sm font-semibold rounded-full  text-lime-400  me-2 px-2.5 py-0.5   dark:text-lime-400 border-solid border border-lime-400 shadow-lg  backdrop-blur-sm bg-white/5 border-white/20 ">
-                        C#
-                      </span>
-                      <span class=" text-sm font-semibold rounded-full  text-lime-400  me-2 px-2.5 py-0.5   dark:text-lime-400 border-solid border border-lime-400 shadow-lg  backdrop-blur-sm bg-white/5 border-white/20">
-                        .NET
-                      </span>
-                      <span class=" text-sm font-semibold rounded-full  text-lime-400  me-2 px-2.5 py-0.5   dark:text-lime-400 border-solid border border-lime-400 shadow-lg  backdrop-blur-sm bg-white/5 border-white/20">
-                        MySQL
-                      </span>
-                    </div>
-                    <div className="flex justify-center pt-4 space-x-4">
-                      <a
-                        href="https://github.com/Chanukaa2002/Student_Bots"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center text-white transition-colors hover:text-lime-100"
-                      >
-                        <i className="mr-2 text-xl fab fa-github"></i>
-                        <span>View Code</span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
           </div>
-        </section>
-      </>
+        </div>
+      </section>
     </>
   );
 };
 
 export default Project;
-
