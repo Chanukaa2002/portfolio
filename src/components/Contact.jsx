@@ -1,5 +1,4 @@
 import React from "react";
-import ScrollRevealComponent from "../utils/ScrollRevealComponent";
 
 const Contact = () => {
   return (

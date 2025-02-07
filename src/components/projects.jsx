@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import ScrollRevealComponent from "../utils/ScrollRevealComponent";
 
 // Import images
 import twitterImage from "../assets/commingSoonImage.png";
@@ -22,7 +21,7 @@ const Project = () => {
       description: "This is a backend clone of the Twitter app.",
       tags: ["Node.js", "Express", "MongoDB", "JSON Web Token", "Postman"],
       github: "https://github.com/Chanukaa2002/twitter_clone",
-      type: ["Web"], // Changed to an array
+      type: ["Web"], 
     },
     {
       id: 2,
@@ -32,7 +31,7 @@ const Project = () => {
       tags: ["Node.js", "Express", "MongoDB", "React JS", "Tailwind CSS", "Postman"],
       github: "https://github.com/Chanukaa2002/e-comz",
       demo: "https://e-com-p2zo.onrender.com/",
-      type: ["Web"], // Changed to an array
+      type: ["Web"], 
     },
     {
       id: 3,
@@ -42,7 +41,7 @@ const Project = () => {
       tags: ["React JS", "Tailwind CSS"],
       github: "https://github.com/Chanukaa2002/portfolio",
       demo: "https://www.chanukadilshan.live",
-      type: ["Web"], // Changed to an array
+      type: ["Web"], 
     },
     {
       id: 4,
@@ -52,7 +51,7 @@ const Project = () => {
       tags: ["Node.js", "Express", "MongoDB", "Postman", "Redis"],
       github: "https://github.com/Chanukaa2002/wether_api",
       demo: "https://weather-check-pearl-xi.vercel.app/",
-      type: ["Web"], // Changed to an array
+      type: ["Web"], 
     },
     {
       id: 5,
@@ -61,7 +60,7 @@ const Project = () => {
       description: "This is a Simple Machine Learning model to predict rock and mines in the deep sea.",
       tags: ["Python", "Numpy", "Pandas", "Seaborn", "Jupyter Notebook"],
       github: "https://github.com/Chanukaa2002/Rock-vs-Mine-Prediction-using-Machine-Learning",
-      type: ["Web"], // Changed to an array
+      type: ["Web"], 
     },
     {
       id: 6,
@@ -70,7 +69,7 @@ const Project = () => {
       description: "This is a Music listening and uploading application created for a University project.",
       tags: ["Java", "Java Swing", "MySQL"],
       github: "https://github.com/Chanukaa2002/SoundWave-ead-cw",
-      type: ["Windows"], // Changed to an array
+      type: ["Windows"], 
     },
     {
       id: 7,
@@ -79,7 +78,7 @@ const Project = () => {
       description: "This is a School Management system, created for a University project.",
       tags: ["C#", ".NET", "MySQL"],
       github: "https://github.com/Chanukaa2002/Student_Bots",
-      type: ["Windows"], // Changed to an array
+      type: ["Windows"], 
     },
     {
       id:8,

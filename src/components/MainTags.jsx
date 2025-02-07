@@ -29,7 +29,6 @@ function MainTags() {
   return (
     <ScrollRevealComponent>
       <div className="flex flex-col items-center justify-center px-4 text-center md:text-left md:items-start md:px-16 lg:px-32 md:py-1">
-        {/* Dynamic Text */}
         <div>
           <h1 className="text-3xl font-bold text-white sm:text-4xl md:text-6xl lg:text-6xl">
             I am <br />
@@ -40,7 +39,6 @@ function MainTags() {
           </h1>
         </div>
 
-        {/* Description and Button */}
         <div className="mt-6 text-base text-gray-300 sm:text-lg md:text-xl lg:text-2xl">
           <p>
             Backend Developer from Sri Lanka, specializing in creating powerful,
@@ -56,11 +54,7 @@ function MainTags() {
           </a>
         </div>
 
-        {/* Reduce margin-top on small screens */}
-        <div className="mt-10 md:mt-20 sm:mt-4">
-          {/* Adjust margin for small screens */}
-          {/* Main Tags section content */}
-        </div>
+        <div className="mt-10 md:mt-20 sm:mt-4"></div>
       </div>
     </ScrollRevealComponent>
   );
