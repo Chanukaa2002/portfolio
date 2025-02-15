@@ -53,19 +53,23 @@ const About = () => {
       {[...Array(Math.ceil(skills.length / 6))].map((_, slideIndex) => (
         <SwiperSlide key={slideIndex}>
           <div className="grid grid-cols-2 gap-4 p-4">
-            {skills.slice(slideIndex * 6, (slideIndex + 1) * 6).map((skill, index) => (
-              <div
-                key={index}
-                className="flex items-center p-2 space-x-1 text-sm border rounded-lg shadow-lg backdrop-blur-md bg-white/5 border-white/20"
-              >
-                <img
-                  src={`https://skillicons.dev/icons?i=${skill.icon}`}
-                  alt={skill.name}
-                  className="w-4 h-4"
-                />
-                <span className="pl-4 font-bold text-white">{skill.name}</span>
-              </div>
-            ))}
+            {skills
+              .slice(slideIndex * 6, (slideIndex + 1) * 6)
+              .map((skill, index) => (
+                <div
+                  key={index}
+                  className="flex items-center p-2 space-x-1 text-sm border rounded-lg shadow-lg backdrop-blur-md bg-white/5 border-white/20"
+                >
+                  <img
+                    src={`https://skillicons.dev/icons?i=${skill.icon}`}
+                    alt={skill.name}
+                    className="w-4 h-4"
+                  />
+                  <span className="pl-4 font-bold text-white">
+                    {skill.name}
+                  </span>
+                </div>
+              ))}
           </div>
         </SwiperSlide>
       ))}
@@ -154,6 +158,16 @@ const About = () => {
             API Fundamentals Student Expert
           </a>
           <span className="ml-2">by Postman</span>
+        </li>
+        <li>
+          <a
+            href="https://badgr.com/public/assertions/67b04377157e9b171a2b1617?identity__email=mchanuka72@gmail.com"
+            className="text-transparent bg-gradient-to-r from-lime-400 via-lime-300 to-lime-200 bg-clip-text"
+            target="_blank"
+          >
+            GenAI 101 with Pieces
+          </a>
+          <span className="ml-2">by Pieces</span>
         </li>
       </ul>
     </div>
