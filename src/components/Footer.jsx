@@ -4,9 +4,9 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="text-lg text-gray-400 center text- pb-7">
-      <p>
-        © {currentYear} Made with ❤️ by Chanuka Dilshan.<br/> All rights reserved.
+    <footer className="flex items-center justify-center text-lg text-gray-400 pb-7">
+      <p className="text-center">
+        © {currentYear} Made with ❤️ by Chanuka Dilshan.<br /> All rights reserved.
       </p>
     </footer>
   );
