@@ -9,6 +9,7 @@ import mlImage from "../assets/commingSoonImage.png";
 import soundwaveImage from "../assets/soundwaveImage.png";
 import studentbotsImage from "../assets/studentbotImage.png";
 import NIBMEvexImage from "../assets/commingSoonImage.png";
+import BlogImage from "../assets/blog.jpg?url";
 
 const Project = () => {
   const [activeFilter, setActiveFilter] = useState("All");
@@ -21,79 +22,113 @@ const Project = () => {
       description: "This is a backend clone of the Twitter app.",
       tags: ["Node.js", "Express", "MongoDB", "JSON Web Token", "Postman"],
       github: "https://github.com/Chanukaa2002/twitter_clone",
-      type: ["Web"], 
+      type: ["Web"],
     },
     {
       id: 2,
       title: "FullStack E-Commerce Webapp",
       image: ecommerceImage,
-      description: "This is a simple e-commerce webapp that can create, update, and delete products.",
-      tags: ["Node.js", "Express", "MongoDB", "React JS", "Tailwind CSS", "Postman"],
+      description:
+        "This is a simple e-commerce webapp that can create, update, and delete products.",
+      tags: [
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "React JS",
+        "Tailwind CSS",
+        "Postman",
+      ],
       github: "https://github.com/Chanukaa2002/e-comz",
       demo: "https://e-com-p2zo.onrender.com/",
-      type: ["Web"], 
+      type: ["Web"],
     },
     {
       id: 3,
       title: "Portfolio Website",
       image: portfolioImage,
-      description: "This is my portfolio website showcasing my skills and projects.",
+      description:
+        "This is my portfolio website showcasing my skills and projects.",
       tags: ["React JS", "Tailwind CSS"],
       github: "https://github.com/Chanukaa2002/portfolio",
       demo: "https://www.chanukadilshan.live",
-      type: ["Web"], 
+      type: ["Web"],
     },
     {
       id: 4,
       title: "Weather API",
       image: weatherImage,
-      description: "This is a Simple Weather API that can check the current weather by city.",
+      description:
+        "This is a Simple Weather API that can check the current weather by city.",
       tags: ["Node.js", "Express", "MongoDB", "Postman", "Redis"],
       github: "https://github.com/Chanukaa2002/wether_api",
       demo: "https://weather-check-pearl-xi.vercel.app/",
-      type: ["Web"], 
+      type: ["Web"],
     },
     {
       id: 5,
       title: "Rock and Mine Sonar Prediction",
       image: mlImage,
-      description: "This is a Simple Machine Learning model to predict rock and mines in the deep sea.",
+      description:
+        "This is a Simple Machine Learning model to predict rock and mines in the deep sea.",
       tags: ["Python", "Numpy", "Pandas", "Seaborn", "Jupyter Notebook"],
-      github: "https://github.com/Chanukaa2002/Rock-vs-Mine-Prediction-using-Machine-Learning",
-      type: ["Web"], 
+      github:
+        "https://github.com/Chanukaa2002/Rock-vs-Mine-Prediction-using-Machine-Learning",
+      type: ["Web"],
     },
     {
       id: 6,
       title: "SoundWave (Music app)",
       image: soundwaveImage,
-      description: "This is a Music listening and uploading application created for a University project.",
+      description:
+        "This is a Music listening and uploading application created for a University project.",
       tags: ["Java", "Java Swing", "MySQL"],
       github: "https://github.com/Chanukaa2002/SoundWave-ead-cw",
-      type: ["Windows"], 
+      type: ["Windows"],
     },
     {
       id: 7,
       title: "StudentBots",
       image: studentbotsImage,
-      description: "This is a School Management system, created for a University project.",
+      description:
+        "This is a School Management system, created for a University project.",
       tags: ["C#", ".NET", "MySQL"],
       github: "https://github.com/Chanukaa2002/Student_Bots",
-      type: ["Windows"], 
+      type: ["Windows"],
     },
     {
-      id:8,
+      id: 8,
       title: "NIBMEvex",
       image: NIBMEvexImage,
-      description: "This is a Event managment system, Contributed for a University project",
-      tags: ["Java", "Springboot", "MySQL", "AWS", "BCrypt", "Swagger","Github Actions"],
+      description:
+        "This is a Event managment system, Contributed for a University project",
+      tags: [
+        "Java",
+        "Springboot",
+        "MySQL",
+        "AWS",
+        "BCrypt",
+        "Swagger",
+        "Github Actions",
+      ],
       github: "https://github.com/Chanukaa2002/EAD2-Backend",
-      type: ["Web","Contribution"],
-    }
+      type: ["Web", "Contribution"],
+    },
+    {
+      id: 9,
+      title: "Blog site",
+      image: BlogImage,
+      description: "This is my personal bloging site's ",
+      tags: ["React JS", "Tailwind CSS","Node JS","mongoDB","Express JS"],
+      github: "https://github.com/Chanukaa2002/personal_blog_frontend",
+      demo: "https://www.blog.chanukadilshan.live",
+      type: ["Web"],
+    },
   ];
 
-  const filteredProjects = activeFilter === "All" 
-    ? projects 
-    : projects.filter(project => project.type.includes(activeFilter));
+  const filteredProjects =
+    activeFilter === "All"
+      ? projects
+      : projects.filter((project) => project.type.includes(activeFilter));
 
   return (
     <>
@@ -101,7 +136,6 @@ const Project = () => {
         <div className="pt-56 pb-10 text-center text-white">
           <p className="pb-10 text-4xl font-bold">Projects</p>
           <div className="flex flex-wrap justify-center gap-4 mb-10">
-            
             {["All", "Web", "Windows", "Contribution"].map((filter) => (
               <button
                 key={filter}
@@ -120,7 +154,10 @@ const Project = () => {
             <div className="w-full px-4 md:w-3/4">
               <div className="grid grid-cols-1 gap-6 text-center sm:grid-cols-2 lg:grid-cols-3">
                 {filteredProjects.map((project) => (
-                  <div key={project.id} className="p-2 border rounded-lg shadow-lg backdrop-blur-sm bg-white/5 border-white/20">
+                  <div
+                    key={project.id}
+                    className="p-2 border rounded-lg shadow-lg backdrop-blur-sm bg-white/5 border-white/20"
+                  >
                     <img
                       src={project.image}
                       alt={project.title}
