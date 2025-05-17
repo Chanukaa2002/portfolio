@@ -3,7 +3,9 @@ import { Link } from "react-scroll";
 
 const NavBar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
+  const navigateToExternal = (url) => {
+    window.location.href = url;
+  };
   return (
     <div>
       <nav className="fixed top-0 left-0 right-0 z-50 w-full px-4 mx-auto mt-2 border rounded-full shadow-lg backdrop-blur-md bg-white/5 border-white/20 sm:w-10/12 md:w-8/12 lg:w-6/12 xl:w-4/12">
@@ -49,6 +51,14 @@ const NavBar = () => {
               >
                 Contact
               </Link>
+              <span
+                onClick={() =>
+                  navigateToExternal("https://www.blog.chanukadilshan.live")
+                }
+                className="px-3 py-2 text-sm font-bold text-gray-300 rounded-md cursor-pointer hover:bg-lime-400 hover:text-black"
+              >
+                Portfolio
+              </span>
             </div>
           </div>
         </div>

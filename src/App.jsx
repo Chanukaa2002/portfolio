@@ -7,7 +7,6 @@ import Project from "./components/projects";
 import Footer from "./components/Footer";
 import Contact from "./components/Contact";
 import "../src/styles/background.css";
-import BLogContaint from "./blog/BLogContaint";
 import { Route, Routes } from "react-router-dom";
 
 function App() {
@@ -37,11 +36,7 @@ function App() {
     <>
       <div className="absolute inset-0 stars -z-10 " />
       <NavBar />
-      {/* Flex container for ProfilePicture and MainTags */}
-
-
-      {/* Apply glass effect to About, Project, and Contact sections */}
-
+  
       <div className="p-6 glass-effect">
       <div className="flex flex-col items-center md:flex-row md:space-x-8 md:items-start md:mt-20">
         <div className="pr-28 md:mt-20">
