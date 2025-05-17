@@ -9,7 +9,7 @@ import mlImage from "../assets/commingSoonImage.png";
 import soundwaveImage from "../assets/soundwaveImage.png";
 import studentbotsImage from "../assets/studentbotImage.png";
 import NIBMEvexImage from "../assets/commingSoonImage.png";
-import BlogImage from "../assets/blog.jpg?url";
+import BlogImage from "../assets/commingSoonImage.png"
 
 const Project = () => {
   const [activeFilter, setActiveFilter] = useState("All");
