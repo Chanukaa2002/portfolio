@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -92,7 +93,6 @@ const About = () => {
     </div>
   );
 
-  // Rest of the code remains the same...
   const educationsList = (
     <div className="flex justify-center">
       <ul className="text-base text-left list-disc sm:text-xl">
@@ -117,13 +117,14 @@ const About = () => {
   );
 
   const certificationsList = (
-    <div className="flex justify-center">
-      <ul className="text-base text-left list-disc sm:text-xl">
+    <div className="flex flex-col items-center">
+      <ul className="mb-6 text-base text-left list-disc sm:text-xl">
         <li>
           <a
             href="https://open.uom.lk/lms/mod/customcert/verify_certificate.php?contextid=4776&code=kcsp4kXOAk&qrcode=1"
             className="text-transparent bg-gradient-to-r from-lime-400 via-lime-300 to-lime-200 bg-clip-text"
             target="_blank"
+            rel="noopener noreferrer"
           >
             Python for Beginner
           </a>
@@ -134,6 +135,7 @@ const About = () => {
             href="https://open.uom.lk/lms/mod/customcert/verify_certificate.php?code=4Qk4sVWQpp"
             className="text-transparent bg-gradient-to-r from-lime-400 via-lime-300 to-lime-200 bg-clip-text"
             target="_blank"
+            rel="noopener noreferrer"
           >
             Frontend Web Development
           </a>
@@ -144,6 +146,7 @@ const About = () => {
             href="https://open.uom.lk/lms/mod/customcert/verify_certificate.php?code=ooRriETAC1"
             className="text-transparent bg-gradient-to-r from-lime-400 via-lime-300 to-lime-200 bg-clip-text"
             target="_blank"
+            rel="noopener noreferrer"
           >
             Web Design for Beginner
           </a>
@@ -154,6 +157,7 @@ const About = () => {
             href="https://badgr.com/public/assertions/RxZSosLjRKK2jkcPuRJt7g?identity__email=mchanuka72@gmail.com"
             className="text-transparent bg-gradient-to-r from-lime-400 via-lime-300 to-lime-200 bg-clip-text"
             target="_blank"
+            rel="noopener noreferrer"
           >
             API Fundamentals Student Expert
           </a>
@@ -164,12 +168,40 @@ const About = () => {
             href="https://badgr.com/public/assertions/67b04377157e9b171a2b1617?identity__email=mchanuka72@gmail.com"
             className="text-transparent bg-gradient-to-r from-lime-400 via-lime-300 to-lime-200 bg-clip-text"
             target="_blank"
+            rel="noopener noreferrer"
           >
             GenAI 101 with Pieces
           </a>
           <span className="ml-2">by Pieces</span>
         </li>
       </ul>
+
+      {/* View More Button */}
+      <Link
+        to="/certificates"
+        className="inline-flex items-center px-6 py-3 text-sm font-medium text-black transition-colors duration-300 rounded-lg shadow-lg bg-lime-400 hover:bg-lime-300"
+      >
+        <svg
+          className="w-4 h-4 mr-2"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+          />
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+          />
+        </svg>
+        View All Certificates
+      </Link>
     </div>
   );
 
@@ -192,9 +224,9 @@ const About = () => {
                 functional, high-performing applications.
                 <br />
                 <br /> Driven by curiosity and a desire to create seamless
-                digital experiences, I’m constantly learning and honing my
+                digital experiences, I'm constantly learning and honing my
                 skills in backend technologies, database management, and API
-                design. Whether it’s optimizing database queries or designing
+                design. Whether it's optimizing database queries or designing
                 robust APIs, I am focused on building solutions that are both
                 innovative and practical.
               </p>
