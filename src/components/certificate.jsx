@@ -35,6 +35,16 @@ const Certificate = () => {
       verifyUrl:
         "https://open.uom.lk/lms/mod/customcert/verify_certificate.php?code=ooRriETAC1",
     },
+    {
+      id: 4,
+      title: "Linear Algebra for Machine Learning and Data Science",
+      issuer: "DeepLearning.AI",
+      date: "2025",
+      image:
+        "https://res.cloudinary.com/dlohr6hrn/image/upload/v1749288143/C1_ejvdwa.png",
+      verifyUrl:
+        "https://www.coursera.org/account/accomplishments/verify/E0BM75OUC2LY",
+    },
     //
   ];
 
