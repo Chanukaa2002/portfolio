@@ -117,9 +117,9 @@ const About = () => {
   );
 
   const certificationsList = (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center space-y-6">
       <ul className="mb-6 text-base text-left list-disc sm:text-xl">
-        <li>
+        {/* <li>
           <a
             href="https://www.coursera.org/account/accomplishments/verify/BFMDYIRJC63F"
             className="text-transparent bg-gradient-to-r from-lime-400 via-lime-300 to-lime-200 bg-clip-text"
@@ -187,6 +187,28 @@ const About = () => {
         </li>
         <li>
           <a
+            href="https://www.credly.com/badges/c40e216b-918d-4feb-b9e4-db33c9175cca/linked_in?t=szw33z"
+            className="text-transparent bg-gradient-to-r from-lime-400 via-lime-300 to-lime-200 bg-clip-text"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Emerging Talent Community Member
+          </a>
+          <span className="ml-2">by AWS Educte</span>
+        </li>
+        <li>
+          <a
+            href="https://www.credly.com/badges/c40e216b-918d-4feb-b9e4-db33c9175cca/linked_in?t=szw33z"
+            className="text-transparent bg-gradient-to-r from-lime-400 via-lime-300 to-lime-200 bg-clip-text"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Machine Learning Foundations
+          </a>
+          <span className="ml-2">by AWS Educate</span>
+        </li>
+        <li>
+          <a
             href="https://badgr.com/public/assertions/67b04377157e9b171a2b1617?identity__email=mchanuka72@gmail.com"
             className="text-transparent bg-gradient-to-r from-lime-400 via-lime-300 to-lime-200 bg-clip-text"
             target="_blank"
@@ -195,7 +217,7 @@ const About = () => {
             GenAI 101 with Pieces
           </a>
           <span className="ml-2">by Pieces</span>
-        </li>
+        </li> */}
       </ul>
 
       {/* View More Button */}
@@ -223,6 +245,25 @@ const About = () => {
           />
         </svg>
         View All Certificates
+      </Link>
+      <Link
+        to="/badges"
+        className="inline-flex items-center px-6 py-3 text-sm font-medium text-black transition-colors duration-300 rounded-lg shadow-lg bg-lime-400 hover:bg-lime-300"
+      >
+        <svg
+          className="w-4 h-4 mr-2"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+          />
+        </svg>
+        View All Badges
       </Link>
     </div>
   );

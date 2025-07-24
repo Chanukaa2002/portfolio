@@ -1,69 +1,59 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-const Certificate = () => {
-  const [selectedCertificate, setSelectedCertificate] = useState(null);
+const Badges = () => {
+  const [selectedBadge, setSelectedBadge] = useState(null);
 
-  const certificates = [
+  const badges = [
     {
       id: 1,
-      title: "Python For Beginner",
-      issuer: "CODL UOM",
-      date: "2024",
+      title: "Machine Learning Foundations",
+      issuer: "AWS Educate",
+      date: "2025",
       image:
-        "https://res.cloudinary.com/dlohr6hrn/image/upload/v1749092905/python_1_uom_e2gxud.png",
+        "https://res.cloudinary.com/dlohr6hrn/image/upload/v1753361920/aws-educate-machine-learning-foundations_1_ty3wr8.png",
       verifyUrl:
-        "https://open.uom.lk/lms/mod/customcert/verify_certificate.php?contextid=4776&code=kcsp4kXOAk&qrcode=1",
+        "https://www.credly.com/badges/c40e216b-918d-4feb-b9e4-db33c9175cca/linked_in?t=szw33z",
     },
     {
       id: 2,
-      title: "Front-End Web Development",
-      issuer: "CODL UOM",
+      title: "GenAI 101 with Pieces",
+      issuer: "Pieces",
       date: "2024",
       image:
-        "https://res.cloudinary.com/dlohr6hrn/image/upload/v1749093664/fe_oiglp2.png",
+        "https://res.cloudinary.com/dlohr6hrn/image/upload/v1753361935/assertion-7Adyw2SzTSeP7JjSB0yRAg_ignc2d.png",
       verifyUrl:
-        "https://open.uom.lk/lms/mod/customcert/verify_certificate.php?code=4Qk4sVWQpp",
+        "https://badgr.com/public/assertions/67b04377157e9b171a2b1617?identity__email=mchanuka72@gmail.com",
     },
     {
       id: 3,
-      title: "Web Design for Beginner",
-      issuer: "CODL UOM",
+      title: "Emerging Talent Community",
+      issuer: "AWS Educate",
       date: "2024",
       image:
-        "https://res.cloudinary.com/dlohr6hrn/image/upload/v1749093809/we_lig8a1.png",
+        "https://res.cloudinary.com/dlohr6hrn/image/upload/v1753361920/AWSEBadge_bqkjmw.png",
       verifyUrl:
-        "https://open.uom.lk/lms/mod/customcert/verify_certificate.php?code=ooRriETAC1",
+        "https://www.credly.com/badges/c40e216b-918d-4feb-b9e4-db33c9175cca/linked_in?t=szw33z",
     },
     {
       id: 4,
-      title: "Linear Algebra for Machine Learning and Data Science",
-      issuer: "DeepLearning.AI",
-      date: "2025",
+      title: "API Fundamentals Student Expert",
+      issuer: "Postman",
+      date: "2024",
       image:
-        "https://res.cloudinary.com/dlohr6hrn/image/upload/v1749288143/C1_ejvdwa.png",
+        "https://res.cloudinary.com/dlohr6hrn/image/upload/v1753361935/pstmn_mbyi1x.png",
       verifyUrl:
-        "https://www.coursera.org/account/accomplishments/verify/E0BM75OUC2LY",
+        "https://badgr.com/public/assertions/RxZSosLjRKK2jkcPuRJt7g?identity__email=mchanuka72@gmail.com",
     },
-    {
-      id: 5,
-      title: "Supervised Machine Learning: Regression and Classification ",
-      issuer: "DeepLearning.AI",
-      date: "2025",
-      image:
-        "https://res.cloudinary.com/dlohr6hrn/image/upload/v1753361007/Capture_sjtqal.png",
-      verifyUrl:
-        "https://www.coursera.org/account/accomplishments/verify/BFMDYIRJC63F",
-    },
-    //
+    // Add more badges as needed
   ];
 
-  const handleCertificateClick = (certificate) => {
-    setSelectedCertificate(certificate);
+  const handleBadgeClick = (badge) => {
+    setSelectedBadge(badge);
   };
 
   const closeModal = () => {
-    setSelectedCertificate(null);
+    setSelectedBadge(null);
   };
 
   return (
@@ -89,59 +79,53 @@ const Certificate = () => {
           </svg>
           Back to About
         </Link>
-        <h1 className="mb-4 text-4xl font-bold">My Certifications</h1>
+        <h1 className="mb-4 text-4xl font-bold">My Badges</h1>
         <p className="max-w-2xl mx-auto text-xl text-gray-300">
-          A collection of my professional certifications and achievements in
-          software development and technology.
+          A collection of my digital badges and achievements in software
+          development and technology.
         </p>
       </div>
 
-      {/* Certificates Grid */}
+      {/* Badges Grid */}
       <div className="container px-4 pb-20 mx-auto">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {certificates.map((cert) => (
+          {badges.map((badge) => (
             <div
-              key={cert.id}
-              onClick={() => handleCertificateClick(cert)}
+              key={badge.id}
+              onClick={() => handleBadgeClick(badge)}
               className="p-6 transition-all duration-300 transform border cursor-pointer bg-white/5 backdrop-blur-md border-white/20 rounded-xl hover:bg-white/10 hover:scale-105 hover:shadow-2xl"
             >
-              {/* ✅ CORRECTED GRID IMAGE CONTAINER */}
+              {/* ✅ CORRECTED IMAGE CONTAINER ✅ */}
               <div className="flex items-center justify-center h-48 mb-4">
                 <img
-                  src={cert.image}
-                  alt={cert.title}
+                  src={badge.image}
+                  alt={badge.title}
                   className="object-contain w-auto h-full"
                 />
               </div>
 
               <h3 className="mb-2 text-xl font-bold text-center text-lime-400">
-                {cert.title}
+                {badge.title}
               </h3>
-              <p className="mb-2 text-center text-gray-300">{cert.issuer}</p>
-
-              <div className="flex items-center justify-between"></div>
+              <p className="mb-2 text-center text-gray-300">{badge.issuer}</p>
+              <p className="text-sm text-center text-gray-400">{badge.date}</p>
             </div>
           ))}
         </div>
       </div>
 
-      {/* Modal for Certificate Details */}
-      {selectedCertificate && (
+      {/* Modal for Badge Details (No changes needed here) */}
+      {selectedBadge && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
           <div className="bg-gray-900 border border-white/20 rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
             <div className="p-6">
-              {/* Modal Header */}
               <div className="flex items-start justify-between mb-6">
                 <div>
                   <h2 className="mb-2 text-2xl font-bold text-lime-400">
-                    {selectedCertificate.title}
+                    {selectedBadge.title}
                   </h2>
-                  <p className="text-gray-300">
-                    {selectedCertificate.issuer}
-                  </p>
-                  <p className="text-sm text-gray-400">
-                    {selectedCertificate.date}
-                  </p>
+                  <p className="text-gray-300">{selectedBadge.issuer}</p>
+                  <p className="text-sm text-gray-400">{selectedBadge.date}</p>
                 </div>
                 <button
                   onClick={closeModal}
@@ -163,24 +147,22 @@ const Certificate = () => {
                 </button>
               </div>
 
-              {/* ✅ CORRECTED MODAL IMAGE CONTAINER */}
-              <div className="relative flex items-center justify-center mb-6 overflow-hidden rounded-lg aspect-video">
+              <div className="relative flex items-center justify-center mb-6 overflow-hidden rounded-lg aspect-video ">
                 <img
-                  src={selectedCertificate.image}
-                  alt={selectedCertificate.title}
+                  src={selectedBadge.image}
+                  alt={selectedBadge.title}
                   className="object-contain w-full h-full"
                 />
               </div>
 
-              {/* Actions */}
               <div className="flex gap-4">
                 <a
-                  href={selectedCertificate.verifyUrl}
+                  href={selectedBadge.verifyUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex-1 px-6 py-3 font-medium text-center text-black transition-colors rounded-lg bg-lime-400 hover:bg-lime-300"
                 >
-                  Verify Certificate
+                  Verify Badge
                 </a>
                 <button
                   onClick={closeModal}
@@ -197,4 +179,4 @@ const Certificate = () => {
   );
 };
 
-export default Certificate;
+export default Badges;

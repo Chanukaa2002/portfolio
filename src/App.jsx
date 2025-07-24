@@ -1,5 +1,10 @@
 import React, { useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
 import NavBar from "./components/NavBar";
 import ProfilePicture from "./components/ProfilePicture";
 import MainTags from "./components/MainTags";
@@ -8,6 +13,7 @@ import Project from "./components/projects";
 import Footer from "./components/Footer";
 import Contact from "./components/Contact";
 import Certificates from "./components/certificate";
+import Badges from "./components/Badges";
 import "../src/styles/background.css";
 
 // Create a separate component to handle route-based rendering
@@ -18,12 +24,13 @@ function AppContent() {
   return (
     <>
       <div className="absolute inset-0 stars -z-10" />
-      
+
       {/* Conditionally render NavBar */}
       {!isCertificatesPage && <NavBar />}
 
       <Routes>
         <Route path="/certificates" element={<Certificates />} />
+        <Route path="/badges" element={<Badges />} />
         <Route
           path="/"
           element={
