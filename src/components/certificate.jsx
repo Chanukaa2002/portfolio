@@ -45,6 +45,16 @@ const Certificate = () => {
       verifyUrl:
         "https://www.coursera.org/account/accomplishments/verify/E0BM75OUC2LY",
     },
+    {
+      id: 5,
+      title: "Supervised Machine Learning: Regression and Classification ",
+      issuer: "DeepLearning.AI",
+      date: "2025",
+      image:
+        "https://res.cloudinary.com/dlohr6hrn/image/upload/v1753361007/Capture_sjtqal.png",
+      verifyUrl:
+        "https://www.coursera.org/account/accomplishments/verify/BFMDYIRJC63F",
+    },
     //
   ];
 

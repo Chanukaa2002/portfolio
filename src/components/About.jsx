@@ -121,6 +121,17 @@ const About = () => {
       <ul className="mb-6 text-base text-left list-disc sm:text-xl">
         <li>
           <a
+            href="https://www.coursera.org/account/accomplishments/verify/BFMDYIRJC63F"
+            className="text-transparent bg-gradient-to-r from-lime-400 via-lime-300 to-lime-200 bg-clip-text"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Supervised Machine Learning
+          </a>
+          <span className="ml-2">by DeepLearning.AI</span>
+        </li>
+        <li>
+          <a
             href="https://www.coursera.org/account/accomplishments/verify/E0BM75OUC2LY"
             className="text-transparent bg-gradient-to-r from-lime-400 via-lime-300 to-lime-200 bg-clip-text"
             target="_blank"
