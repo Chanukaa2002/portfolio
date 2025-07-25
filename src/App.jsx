@@ -192,22 +192,10 @@ const allProjects = [
     tags: ["Node.js", "Express", "MongoDB", "JWT", "Postman"],
   },
   {
-    title: "Weather App",
-    description:
-      "A simple weather application that fetches and displays weather data from a third-party API.",
-    image: "https://placehold.co/600x400/1F2937/F59E0B?text=Weather+App",
-    liveLink: "#",
-    githubLink: "#",
-    tags: ["React", "API"],
-  },
-  {
-    title: "Todo List App",
-    description:
-      "A classic todo list application with features to add, remove, and mark tasks as complete.",
-    image: "https://placehold.co/600x400/1F2937/EC4899?text=Todo+App",
-    liveLink: "#",
-    githubLink: "#",
-    tags: ["JavaScript", "HTML", "CSS"],
+    title: "Update soon",
+    description: ";)",
+    image: "https://placehold.co/600x400/1F2937/F59E0B?text=UPDATE_SOON!",
+    tags: [";)"],
   },
 ];
 
@@ -335,13 +323,13 @@ const BackgroundStars = () => {
 };
 
 const CodeWindow = ({ children }) => (
-  <div className="bg-gray-800/50 backdrop-blur-sm border border-blue-500/30 rounded-lg shadow-xl overflow-hidden">
-    <div className="bg-gray-900/80 px-4 py-2 flex items-center">
-      <div className="w-3 h-3 bg-red-500 rounded-full mr-2"></div>
-      <div className="w-3 h-3 bg-yellow-500 rounded-full mr-2"></div>
+  <div className="overflow-hidden border rounded-lg shadow-xl bg-gray-800/50 backdrop-blur-sm border-blue-500/30">
+    <div className="flex items-center px-4 py-2 bg-gray-900/80">
+      <div className="w-3 h-3 mr-2 bg-red-500 rounded-full"></div>
+      <div className="w-3 h-3 mr-2 bg-yellow-500 rounded-full"></div>
       <div className="w-3 h-3 bg-green-500 rounded-full"></div>
     </div>
-    <div className="p-6 md:p-8 text-gray-300">{children}</div>
+    <div className="p-6 text-gray-300 md:p-8">{children}</div>
   </div>
 );
 
@@ -386,25 +374,24 @@ const ScrollToTopButton = () => {
 // --- SECTIONS / PAGES ---
 
 const Hero = () => (
-  <section id="home" className="min-h-screen flex items-center justify-center">
-    <div className="container mx-auto px-4">
-      <div className="grid md:grid-cols-2 gap-16 items-center">
+  <section id="home" className="flex items-center justify-center min-h-screen">
+    <div className="container px-4 mx-auto">
+      <div className="grid items-center gap-16 md:grid-cols-2">
         <div className="text-center md:text-left">
-          <h2 className="text-3xl md:text-4xl font-light text-gray-300">
+          <h2 className="text-3xl font-light text-gray-300 md:text-4xl">
             Hi, I am
           </h2>
-          <h1 className="text-5xl md:text-7xl font-bold text-white mt-2 mb-4">
+          <h1 className="mt-2 mb-4 text-5xl font-bold text-white md:text-7xl">
             Chanuka Dilshan
           </h1>
-          <p className="text-lg md:text-xl text-blue-300 mb-8">
+          <p className="mb-8 text-lg text-blue-300 md:text-xl">
             A passionate Backend and Machine Learning Engineer, dedicated to
             building amazing Backend systems and ML Models.
           </p>
-          <div className="flex justify-center md:justify-start gap-4">
+          <div className="flex justify-center gap-4 md:justify-start">
             <a
               href="https://drive.google.com/file/d/1y6y7TEes8a22vZRhfThefzacelFEw4pm/view?usp=drive_link"
-              className="bg-blue-600 hover:bg-blue-700 
-                        font-bold py-3 px-6 rounded-lg transition-transform transform hover:scale-105 shadow-lg text-white"
+              className="px-6 py-3 font-bold text-white transition-transform transform bg-blue-600 rounded-lg shadow-lg hover:bg-blue-700 hover:scale-105"
             >
               Download CV
             </a>
@@ -412,20 +399,20 @@ const Hero = () => (
               href="https://github.com/Chanukaa2002"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-gray-700 hover:bg-gray-600 text-white font-bold py-3 px-6 rounded-lg transition-transform transform hover:scale-105 shadow-lg"
+              className="px-6 py-3 font-bold text-white transition-transform transform bg-gray-700 rounded-lg shadow-lg hover:bg-gray-600 hover:scale-105"
             >
               GitHub Projects
             </a>
           </div>
         </div>
-        <div className="relative flex justify-center items-center">
-          <div className="absolute w-72 h-72 md:w-96 md:h-96 bg-purple-600/30 rounded-full blur-3xl"></div>
+        <div className="relative flex items-center justify-center">
+          <div className="absolute rounded-full w-72 h-72 md:w-96 md:h-96 bg-purple-600/30 blur-3xl"></div>
           <div className="relative w-64 h-64 md:w-80 md:h-80">
-            <div className="absolute inset-0 bg-gradient-to-br from-purple-600 to-blue-500 rounded-full transform -rotate-12"></div>
+            <div className="absolute inset-0 transform rounded-full bg-gradient-to-br from-purple-600 to-blue-500 -rotate-12"></div>
             <img
               src={dp}
               alt="Chanuka Dilshan"
-              className="relative w-full h-full object-cover rounded-full border-4 border-gray-800"
+              className="relative object-cover w-full h-full border-4 border-gray-800 rounded-full"
             />
           </div>
         </div>
@@ -437,17 +424,17 @@ const Hero = () => (
 const About = () => {
   const [ref, animationClasses] = useScrollAnimation();
   const aboutText = useTypewriter(
-    "Hello! I'm a 23-year-old Machine Learning  and backend developer, a current undergraduate at the National Institute of Business Management (NIBM) and Postman Student Expert. Passionate about building efficient, scalable systems, I specialize in backend development and enjoy tackling complex challenges in server-side programming and ML modeling. My studies at NIBM have equipped me with a solid foundation in software development, and my hands-on experience in the field has given me the skills to turn concepts into functional, high-performing applications. Driven by curiosity and a desire to create seamless digital experiences, I'm constantly learning and honing my skills in backend technologies, database management, and API design. Whether it's optimizing database queries or designing robust APIs, I am focused on building solutions that are both innovative and practical."
+    "I'm a 23-year-old aspiring Machine Learning Engineer with a strong background in Backend Development. Currently pursuing my degree at NIBM and certified as a Postman Student Expert, I started my journey building scalable APIs, databases, and server-side systems. Over time, my curiosity led me into Machine Learning, where I now focus on applying ML models to real-world challenges. With hands-on experience in both backend systems and ML workflows, I’m looking for an internship where I can contribute to impactful projects while deepening my skills in machine learning."
   );
   return (
     <section id="about" ref={ref} className={`py-20 ${animationClasses}`}>
-      <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center text-white mb-12">
+      <div className="container px-4 mx-auto">
+        <h2 className="mb-12 text-4xl font-bold text-center text-white">
           About <span className="text-blue-400">Me</span>
         </h2>
         <div className="max-w-4xl mx-auto">
           <CodeWindow>
-            <p className="font-mono text-base md:text-lg leading-relaxed">
+            <p className="font-mono text-base leading-relaxed md:text-lg">
               {aboutText}
               <span className="animate-ping">_</span>
             </p>
@@ -484,8 +471,8 @@ const Education = () => {
   ];
   return (
     <section id="education" ref={ref} className={`py-20 ${animationClasses}`}>
-      <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center text-white mb-12">
+      <div className="container px-4 mx-auto">
+        <h2 className="mb-12 text-4xl font-bold text-center text-white">
           My <span className="text-blue-400">Education</span>
         </h2>
         <div className="relative max-w-2xl mx-auto">
@@ -495,10 +482,10 @@ const Education = () => {
               <div className="absolute left-0 top-1 w-8 h-8 bg-blue-600 rounded-full border-4 border-[#0b1120] flex items-center justify-center">
                 <EducationIcon className="w-4 h-4 text-white" />
               </div>
-              <div className="bg-slate-800/50 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-slate-700/50">
-                <p className="text-blue-300 font-semibold mb-1">{edu.period}</p>
+              <div className="p-6 border rounded-lg shadow-lg bg-slate-800/50 backdrop-blur-sm border-slate-700/50">
+                <p className="mb-1 font-semibold text-blue-300">{edu.period}</p>
                 <h3 className="text-xl font-bold text-white">{edu.degree}</h3>
-                <p className="text-gray-400 mb-3">{edu.institution}</p>
+                <p className="mb-3 text-gray-400">{edu.institution}</p>
                 <p className="text-gray-300">{edu.description}</p>
               </div>
             </div>
@@ -548,11 +535,11 @@ const Skills = () => {
 
   return (
     <section id="skills" ref={ref} className={`py-20 ${animationClasses}`}>
-      <div className="container mx-auto px-4 text-center">
-        <h2 className="text-3xl font-bold sm:text-4xl text-white">
+      <div className="container px-4 mx-auto text-center">
+        <h2 className="text-3xl font-bold text-white sm:text-4xl">
           Transforming Ideas into Reality
         </h2>
-        <p className="text-lg text-blue-300 mt-2 mb-16">
+        <p className="mt-2 mb-16 text-lg text-blue-300">
           with Cutting-edge Tools & Technologies
         </p>
         <div className="relative flex flex-col items-center gap-y-6 md:gap-y-8">
@@ -561,20 +548,20 @@ const Skills = () => {
           {skillsByRow.map((row, rowIndex) => (
             <div
               key={rowIndex}
-              className="flex justify-center flex-wrap gap-4 md:gap-6 z-10"
+              className="z-10 flex flex-wrap justify-center gap-4 md:gap-6"
             >
               {row.map((skill) => (
                 <div
                   key={skill.name}
-                  className="group relative p-2 bg-slate-800/50 backdrop-blur-sm rounded-full"
+                  className="relative p-2 rounded-full group bg-slate-800/50 backdrop-blur-sm"
                   title={skill.name}
                 >
                   <img
                     src={`https://skillicons.dev/icons?i=${skill.slug}`}
                     alt={`${skill.name} icon`}
-                    className="w-10 h-10 md:w-14 md:h-14 transition-transform duration-300 group-hover:scale-110"
+                    className="w-10 h-10 transition-transform duration-300 md:w-14 md:h-14 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-white/10 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute inset-0 transition-opacity duration-300 rounded-full opacity-0 bg-white/10 blur-xl group-hover:opacity-100"></div>
                 </div>
               ))}
             </div>
@@ -590,37 +577,37 @@ const Projects = ({ onShowMore }) => {
   const featuredProjects = allProjects.slice(0, 3);
   return (
     <section id="projects" ref={ref} className={`py-20 ${animationClasses}`}>
-      <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center text-white mb-12">
+      <div className="container px-4 mx-auto">
+        <h2 className="mb-12 text-4xl font-bold text-center text-white">
           My <span className="text-purple-400">Projects</span>
         </h2>
-        <div className="grid md:grid-cols-1 gap-12">
+        <div className="grid gap-12 md:grid-cols-1">
           {featuredProjects.map((project, index) => (
             <div
               key={index}
-              className="bg-slate-800/50 backdrop-blur-sm rounded-xl overflow-hidden shadow-lg grid md:grid-cols-2 items-center gap-8 border border-slate-700/50"
+              className="grid items-center gap-8 overflow-hidden border shadow-lg bg-slate-800/50 backdrop-blur-sm rounded-xl md:grid-cols-2 border-slate-700/50"
             >
               <div className={`p-8 ${index % 2 === 1 ? "md:order-2" : ""}`}>
-                <h3 className="text-2xl font-bold text-white mb-3">
+                <h3 className="mb-3 text-2xl font-bold text-white">
                   {project.title}
                 </h3>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="text-xs font-semibold bg-purple-500/20 text-purple-300 py-1 px-3 rounded-full"
+                      className="px-3 py-1 text-xs font-semibold text-purple-300 rounded-full bg-purple-500/20"
                     >
                       {tag}
                     </span>
                   ))}
                 </div>
-                <p className="text-gray-300 mb-6">{project.description}</p>
+                <p className="mb-6 text-gray-300">{project.description}</p>
                 <div className="flex items-center gap-4">
                   <a
                     href={project.liveLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-white hover:text-blue-400 font-semibold transition-colors"
+                    className="flex items-center gap-2 font-semibold text-white transition-colors hover:text-blue-400"
                   >
                     <ExternalLinkIcon className="w-5 h-5" /> Live Demo
                   </a>
@@ -628,7 +615,7 @@ const Projects = ({ onShowMore }) => {
                     href={project.githubLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-white hover:text-blue-400 font-semibold transition-colors"
+                    className="flex items-center gap-2 font-semibold text-white transition-colors hover:text-blue-400"
                   >
                     <GithubIcon className="w-5 h-5" /> Source Code
                   </a>
@@ -638,16 +625,16 @@ const Projects = ({ onShowMore }) => {
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover"
+                  className="object-cover w-full h-full"
                 />
               </div>
             </div>
           ))}
         </div>
-        <div className="text-center mt-16">
+        <div className="mt-16 text-center">
           <button
             onClick={onShowMore}
-            className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-lg transition-transform transform hover:scale-105 shadow-lg"
+            className="px-8 py-3 font-bold text-white transition-transform transform bg-purple-600 rounded-lg shadow-lg hover:bg-purple-700 hover:scale-105"
           >
             Show More Projects
           </button>
@@ -658,44 +645,44 @@ const Projects = ({ onShowMore }) => {
 };
 
 const AllProjectsPage = ({ onBack }) => (
-  <div className="min-h-screen text-white p-4 sm:p-8">
+  <div className="min-h-screen p-4 text-white sm:p-8">
     <div className="container mx-auto">
       <header className="flex items-center justify-between mb-12">
         <button
           onClick={onBack}
-          className="flex items-center gap-2 text-gray-300 hover:text-white font-semibold transition-colors"
+          className="flex items-center gap-2 font-semibold text-gray-300 transition-colors hover:text-white"
         >
           <BackIcon className="w-7 h-7" />
           Back to Home
         </button>
         <h1 className="text-4xl font-bold text-white">All Projects</h1>
       </header>
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {allProjects.map((project, index) => (
           <div
             key={index}
-            className="bg-slate-800/50 backdrop-blur-sm rounded-xl overflow-hidden shadow-lg border border-slate-700/50 flex flex-col"
+            className="flex flex-col overflow-hidden border shadow-lg bg-slate-800/50 backdrop-blur-sm rounded-xl border-slate-700/50"
           >
             <img
               src={project.image}
               alt={project.title}
-              className="w-full h-48 object-cover"
+              className="object-cover w-full h-48"
             />
-            <div className="p-6 flex flex-col flex-grow">
-              <h3 className="text-2xl font-bold text-white mb-2">
+            <div className="flex flex-col flex-grow p-6">
+              <h3 className="mb-2 text-2xl font-bold text-white">
                 {project.title}
               </h3>
               <div className="flex flex-wrap gap-2 mb-4">
                 {project.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="text-xs font-semibold bg-purple-500/20 text-purple-300 py-1 px-3 rounded-full"
+                    className="px-3 py-1 text-xs font-semibold text-purple-300 rounded-full bg-purple-500/20"
                   >
                     {tag}
                   </span>
                 ))}
               </div>
-              <p className="text-gray-300 mb-6 flex-grow">
+              <p className="flex-grow mb-6 text-gray-300">
                 {project.description}
               </p>
               <div className="flex items-center gap-4 mt-auto">
@@ -703,7 +690,7 @@ const AllProjectsPage = ({ onBack }) => (
                   href={project.liveLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-white hover:text-blue-400 font-semibold transition-colors"
+                  className="flex items-center gap-2 font-semibold text-white transition-colors hover:text-blue-400"
                 >
                   <ExternalLinkIcon className="w-5 h-5" /> Live
                 </a>
@@ -711,7 +698,7 @@ const AllProjectsPage = ({ onBack }) => (
                   href={project.githubLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-white hover:text-blue-400 font-semibold transition-colors"
+                  className="flex items-center gap-2 font-semibold text-white transition-colors hover:text-blue-400"
                 >
                   <GithubIcon className="w-5 h-5" /> Code
                 </a>
@@ -732,23 +719,23 @@ const Certificates = ({ onShowMore }) => {
       ref={ref}
       className={`py-20 ${animationClasses}`}
     >
-      <div className="container mx-auto px-4 text-center">
-        <h2 className="text-4xl font-bold text-white mb-4">
+      <div className="container px-4 mx-auto text-center">
+        <h2 className="mb-4 text-4xl font-bold text-white">
           Achievements & Credentials
         </h2>
-        <p className="text-lg text-gray-300 mb-10">
+        <p className="mb-10 text-lg text-gray-300">
           A showcase of my certified skills and completed courses.
         </p>
-        <div className="flex flex-col sm:flex-row justify-center gap-6">
+        <div className="flex flex-col justify-center gap-6 sm:flex-row">
           <button
             onClick={() => onShowMore("certificates")}
-            className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-transform transform hover:scale-105 shadow-lg"
+            className="px-8 py-3 font-bold text-white transition-transform transform bg-blue-600 rounded-lg shadow-lg hover:bg-blue-700 hover:scale-105"
           >
             View Certificates
           </button>
           <button
             onClick={() => onShowMore("badges")}
-            className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-lg transition-transform transform hover:scale-105 shadow-lg"
+            className="px-8 py-3 font-bold text-white transition-transform transform bg-purple-600 rounded-lg shadow-lg hover:bg-purple-700 hover:scale-105"
           >
             View Badges
           </button>
@@ -772,19 +759,19 @@ const ShowcaseModal = ({ isOpen, onClose, data }) => {
 
   return (
     <div
-      className="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex justify-center items-center p-4 transition-opacity duration-300"
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 transition-opacity duration-300 bg-black/70 backdrop-blur-sm"
       onClick={onClose}
     >
       <div
         className="bg-[#0b1120] border border-blue-500/30 rounded-xl shadow-2xl w-full max-w-5xl max-h-[90vh] flex flex-col" // Increased max-width
         onClick={(e) => e.stopPropagation()}
       >
-        <header className="flex justify-between items-center p-4 border-b border-gray-800">
+        <header className="flex items-center justify-between p-4 border-b border-gray-800">
           <div className="flex items-center gap-4">
             {selectedItem && (
               <button
                 onClick={() => setSelectedItem(null)}
-                className="text-gray-400 hover:text-white transition-colors"
+                className="text-gray-400 transition-colors hover:text-white"
               >
                 <BackIcon className="w-7 h-7" />
               </button>
@@ -795,12 +782,12 @@ const ShowcaseModal = ({ isOpen, onClose, data }) => {
           </div>
           <button
             onClick={onClose}
-            className="text-gray-400 hover:text-white transition-colors"
+            className="text-gray-400 transition-colors hover:text-white"
           >
             <CloseIcon className="w-8 h-8" />
           </button>
         </header>
-        <main className="p-6 overflow-y-auto relative">
+        <main className="relative p-6 overflow-y-auto">
           <div
             className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 transition-opacity duration-300 ${
               // This line was changed
@@ -811,14 +798,14 @@ const ShowcaseModal = ({ isOpen, onClose, data }) => {
               <div
                 key={index}
                 onClick={() => setSelectedItem(item)}
-                className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-3 shadow-lg transition-transform transform hover:-translate-y-1 hover:shadow-blue-500/20 cursor-pointer"
+                className="p-3 transition-transform transform rounded-lg shadow-lg cursor-pointer bg-slate-800/50 backdrop-blur-sm hover:-translate-y-1 hover:shadow-blue-500/20"
               >
                 <img
                   src={item.image}
                   alt={item.title}
-                  className="rounded-md w-full h-auto aspect-video object-contain"
+                  className="object-contain w-full h-auto rounded-md aspect-video"
                 />
-                <p className="text-white text-center mt-2 text-sm font-semibold truncate">
+                <p className="mt-2 text-sm font-semibold text-center text-white truncate">
                   {item.title}
                 </p>
               </div>
@@ -830,18 +817,18 @@ const ShowcaseModal = ({ isOpen, onClose, data }) => {
                 <img
                   src={selectedItem.image}
                   alt={selectedItem.title}
-                  className="rounded-lg w-full h-auto shadow-2xl"
+                  className="w-full h-auto rounded-lg shadow-2xl"
                 />
               </div>
               <div className="flex-1 text-center md:text-left">
-                <h3 className="text-3xl font-bold text-white mb-4">
+                <h3 className="mb-4 text-3xl font-bold text-white">
                   {selectedItem.title}
                 </h3>
                 <a
                   href={selectedItem.verifyUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition-transform transform hover:scale-105 shadow-lg"
+                  className="inline-block px-6 py-3 font-bold text-white transition-transform transform bg-green-600 rounded-lg shadow-lg hover:bg-green-700 hover:scale-105"
                 >
                   Verify Credential
                 </a>
@@ -858,27 +845,27 @@ const Chatbot = () => {
   const [ref, animationClasses] = useScrollAnimation();
   return (
     <section id="chatbot" ref={ref} className={`py-20 ${animationClasses}`}>
-      <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-2 gap-16 items-center">
+      <div className="container px-4 mx-auto">
+        <div className="grid items-center gap-16 md:grid-cols-2">
           <div className="text-center md:text-left">
-            <h2 className="text-4xl font-bold text-white mb-4">Ask my Bot</h2>
-            <p className="text-gray-300 mb-6">
+            <h2 className="mb-4 text-4xl font-bold text-white">Ask my Bot</h2>
+            <p className="mb-6 text-gray-300">
               Have a question? Ask my AI assistant! It's trained on my skills,
               projects, and experience. (UI demonstration)
             </p>
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-2 flex gap-2">
+            <div className="flex gap-2 p-2 rounded-lg bg-slate-800/50 backdrop-blur-sm">
               <input
                 type="text"
                 placeholder="Under Developing"
-                className="bg-transparent w-full text-white placeholder-gray-500 focus:outline-none px-3 py-2"
+                className="w-full px-3 py-2 text-white placeholder-gray-500 bg-transparent focus:outline-none"
                 readOnly
               />
-              <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md">
+              <button className="px-4 py-2 font-bold text-white bg-blue-600 rounded-md hover:bg-blue-700">
                 Send
               </button>
             </div>
           </div>
-          <div className="flex justify-center items-center">
+          <div className="flex items-center justify-center">
             <svg
               width="150"
               height="150"
@@ -938,17 +925,17 @@ const Contact = () => {
       className={`py-20 text-center ${animationClasses}`}
     >
       <div className="text-center">
-        <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+        <h2 className="mb-4 text-4xl font-bold text-white md:text-5xl">
           Let's build something <span className="text-blue-400">great</span>{" "}
           together.
         </h2>
-        <p className="text-gray-300 text-lg mb-8">
+        <p className="mb-8 text-lg text-gray-300">
           Feel free to reach out if you're looking for a developer, have a
           question, or just want to connect.
         </p>
         <a
           href="mailto:chanukadilshan2002@gmail.com"
-          className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-transform transform hover:scale-105 shadow-lg text-xl"
+          className="px-8 py-4 text-xl font-bold text-white transition-transform transform rounded-lg shadow-lg bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 hover:scale-105"
         >
           Get In Touch
         </a>
@@ -978,15 +965,15 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="relative text-center py-12 border-t border-gray-800 overflow-hidden">
+    <footer className="relative py-12 overflow-hidden text-center border-t border-gray-800">
       <div className="absolute inset-x-0 bottom-0 h-48">
         <img
           src="https://googleusercontent.com/file_content/1"
           alt="Footer decorative wave"
-          className="w-full h-full object-contain opacity-20"
+          className="object-contain w-full h-full opacity-20"
         />
       </div>
-      <div className="relative z-10 container mx-auto px-4">
+      <div className="container relative z-10 px-4 mx-auto">
         <div className="flex justify-center gap-6 mb-6">
           {socialLinks.map((link) => (
             <a
@@ -995,7 +982,7 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={link.name}
-              className="text-gray-400 hover:text-white transition-transform transform hover:scale-110"
+              className="text-gray-400 transition-transform transform hover:text-white hover:scale-110"
             >
               <link.icon className="w-7 h-7" />
             </a>
@@ -1103,7 +1090,7 @@ export default function App() {
 
   if (showAllProjects) {
     return (
-      <div className="text-white font-sans leading-normal tracking-tight relative overflow-x-hidden">
+      <div className="relative overflow-x-hidden font-sans leading-normal tracking-tight text-white">
         <BackgroundStars />
         <AllProjectsPage onBack={handleBackToHome} />
       </div>
@@ -1111,11 +1098,11 @@ export default function App() {
   }
 
   return (
-    <div className="text-white font-sans leading-normal tracking-tight relative overflow-x-hidden">
+    <div className="relative overflow-x-hidden font-sans leading-normal tracking-tight text-white">
       <BackgroundStars />
-      <div className="absolute top-0 left-0 w-96 h-96 bg-blue-700/30 rounded-full filter blur-3xl opacity-50 animate-blob -z-10"></div>
-      <div className="absolute top-0 right-0 w-96 h-96 bg-purple-700/30 rounded-full filter blur-3xl opacity-50 animate-blob animation-delay-2000 -z-10"></div>
-      <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-pink-700/30 rounded-full filter blur-3xl opacity-50 animate-blob animation-delay-4000 -z-10"></div>
+      <div className="absolute top-0 left-0 rounded-full opacity-50 w-96 h-96 bg-blue-700/30 filter blur-3xl animate-blob -z-10"></div>
+      <div className="absolute top-0 right-0 rounded-full opacity-50 w-96 h-96 bg-purple-700/30 filter blur-3xl animate-blob animation-delay-2000 -z-10"></div>
+      <div className="absolute bottom-0 rounded-full opacity-50 left-1/4 w-96 h-96 bg-pink-700/30 filter blur-3xl animate-blob animation-delay-4000 -z-10"></div>
 
       <main className="relative z-10">
         <Hero />
