@@ -136,15 +136,12 @@ const MediumIcon = ({ className }) => (
     fill="currentColor"
     className={className}
   >
-    <path
-      d="M13.54 12a6.8
-    6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8
-    6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.92 12A3.7 3.7 0 0117.25 15.7V8.3a3.7 3.7 0 013.67 3.7zM24 12a1.15 1.15 0 01-1.15 1.15v-2.3A1.15 1.15 0 0124 12z"
-    ></path>
+    <path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.92 12A3.7 3.7 0 0117.25 15.7V8.3a3.7 3.7 0 013.67 3.7zM24 12a1.15 1.15 0 01-1.15 1.15v-2.3A1.15 1.15 0 0124 12z"></path>
   </svg>
 );
 
-const ArrowUpIcon = ({ className }) => (
+// --- UPDATED SCROLL TO TOP ICON ---
+const ScrollToTopIcon = ({ className }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24"
@@ -157,8 +154,7 @@ const ArrowUpIcon = ({ className }) => (
     strokeLinejoin="round"
     className={className}
   >
-    <line x1="12" y1="19" x2="12" y2="5"></line>
-    <polyline points="5 12 12 5 19 12"></polyline>
+    <polyline points="18 15 12 9 6 15"></polyline>
   </svg>
 );
 
@@ -267,13 +263,13 @@ const BackgroundStars = () => {
 
     const setCanvasDimensions = () => {
       canvas.width = window.innerWidth;
-      canvas.height = document.body.scrollHeight;
+      canvas.height = window.innerHeight;
     };
 
     setCanvasDimensions();
 
     const stars = [];
-    const numStars = 300;
+    const numStars = 500;
 
     for (let i = 0; i < numStars; i++) {
       stars.push({
@@ -333,10 +329,12 @@ const CodeWindow = ({ children }) => (
   </div>
 );
 
+// --- UPDATED SCROLL TO TOP BUTTON ---
 const ScrollToTopButton = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   const toggleVisibility = () => {
+    // Show button when user scrolls down more than 300px
     if (window.pageYOffset > 300) {
       setIsVisible(true);
     } else {
@@ -347,7 +345,7 @@ const ScrollToTopButton = () => {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
+      behavior: "smooth"
     });
   };
 
@@ -361,12 +359,12 @@ const ScrollToTopButton = () => {
   return (
     <button
       onClick={scrollToTop}
-      className={`fixed bottom-8 right-8 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-opacity duration-300 ${
-        isVisible ? "opacity-100" : "opacity-0"
+      className={`fixed bottom-8 right-8 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-all duration-300 z-50 ${
+        isVisible ? "opacity-100 scale-100" : "opacity-0 scale-90 pointer-events-none"
       }`}
-      aria-label="Go to top"
+      aria-label="Scroll to top"
     >
-      <ArrowUpIcon className="w-6 h-6" />
+      <ScrollToTopIcon className="w-6 h-6" />
     </button>
   );
 };
@@ -424,7 +422,7 @@ const Hero = () => (
 const About = () => {
   const [ref, animationClasses] = useScrollAnimation();
   const aboutText = useTypewriter(
-    "I'm a 23-year-old aspiring Machine Learning Engineer with a strong background in Backend Development. Currently pursuing my degree at NIBM and certified as a Postman Student Expert, I started my journey building scalable APIs, databases, and server-side systems. Over time, my curiosity led me into Machine Learning, where I now focus on applying ML models to real-world challenges. With hands-on experience in both backend systems and ML workflows, I’m looking for an internship where I can contribute to impactful projects while deepening my skills in machine learning."
+    "I'm a 23-year-old aspiring Machine Learning Engineer with a strong background in Backend Development. Currently pursuing my degree at NIBM and certified as a Postman Student Expert, I started my journey building scalable APIs, databases, and server-side systems. Over time, my curiosity led me into Machine Learning, where I now focus on applying ML models to real-world challenges. With hands-on experience in both backend systems and ML workflows, I'm looking for an internship where I can contribute to impactful projects while deepening my skills in machine learning."
   );
   return (
     <section id="about" ref={ref} className={`py-20 ${animationClasses}`}>
@@ -841,81 +839,6 @@ const ShowcaseModal = ({ isOpen, onClose, data }) => {
   );
 };
 
-const Chatbot = () => {
-  const [ref, animationClasses] = useScrollAnimation();
-  return (
-    <section id="chatbot" ref={ref} className={`py-20 ${animationClasses}`}>
-      <div className="container px-4 mx-auto">
-        <div className="grid items-center gap-16 md:grid-cols-2">
-          <div className="text-center md:text-left">
-            <h2 className="mb-4 text-4xl font-bold text-white">Ask my Bot</h2>
-            <p className="mb-6 text-gray-300">
-              Have a question? Ask my AI assistant! It's trained on my skills,
-              projects, and experience. (UI demonstration)
-            </p>
-            <div className="flex gap-2 p-2 rounded-lg bg-slate-800/50 backdrop-blur-sm">
-              <input
-                type="text"
-                placeholder="Under Developing"
-                className="w-full px-3 py-2 text-white placeholder-gray-500 bg-transparent focus:outline-none"
-                readOnly
-              />
-              <button className="px-4 py-2 font-bold text-white bg-blue-600 rounded-md hover:bg-blue-700">
-                Send
-              </button>
-            </div>
-          </div>
-          <div className="flex items-center justify-center">
-            <svg
-              width="150"
-              height="150"
-              viewBox="0 0 200 200"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M100 25C141.421 25 175 58.5786 175 100V150C175 163.807 163.807 175 150 175H50C36.1929 175 25 163.807 25 150V100C25 58.5786 58.5786 25 100 25Z"
-                fill="url(#paint0_linear_1_2)"
-              />
-              <rect
-                x="50"
-                y="140"
-                width="100"
-                height="20"
-                rx="10"
-                fill="#1D4ED8"
-              />
-              <circle cx="70" cy="100" r="15" fill="#1F2937" />
-              <circle cx="130" cy="100" r="15" fill="#1F2937" />
-              <circle cx="70" cy="100" r="5" fill="#60A5FA" />
-              <circle cx="130" cy="100" r="5" fill="#60A5FA" />
-              <path
-                d="M80 50L70 35"
-                stroke="#93C5FD"
-                strokeWidth="5"
-                strokeLinecap="round"
-              />
-              <defs>
-                <linearGradient
-                  id="paint0_linear_1_2"
-                  x1="100"
-                  y1="25"
-                  x2="100"
-                  y2="175"
-                  gradientUnits="userSpaceOnUse"
-                >
-                  <stop stopColor="#3B82F6" />
-                  <stop offset="1" stopColor="#8B5CF6" />
-                </linearGradient>
-              </defs>
-            </svg>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-};
-
 const Contact = () => {
   const [ref, animationClasses] = useScrollAnimation();
   return (
@@ -1093,6 +1016,7 @@ export default function App() {
       <div className="relative overflow-x-hidden font-sans leading-normal tracking-tight text-white">
         <BackgroundStars />
         <AllProjectsPage onBack={handleBackToHome} />
+        <ScrollToTopButton />
       </div>
     );
   }
@@ -1111,7 +1035,6 @@ export default function App() {
         <Skills />
         <Projects onShowMore={handleShowAllProjects} />
         <Certificates onShowMore={handleShowMoreCerts} />
-        <Chatbot />
         <Contact />
       </main>
 
