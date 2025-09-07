@@ -169,7 +169,7 @@ const allProjects = [
     liveLink:
       "https://laptop-price-prediction-c3hs.onrender.comhttps://laptop-price-prediction-c3hs.onrender.com/",
     githubLink: "https://github.com/Chanukaa2002/Laptop-price-prediction",
-    tags: ["Python", "Flash", "Jupiter Noteboo"],
+    tags: ["Python", "Flash", "Jupyter Notebook"],
   },
   {
     title: "EATRO - Mobile App",
@@ -185,14 +185,20 @@ const allProjects = [
     description: "This is a Simple web app created with react frontend and flask backend to showcase my Machine learning knowledge,and how to deal with data.",
     image: "https://res.cloudinary.com/dlohr6hrn/image/upload/v1757242600/house_ycyu5h.png",
     githubLink: "https://github.com/Chanukaa2002/house-sorting-app",
-    tags: ["React js", "Flask", "Sklearn", "pikle", "Kaggle","Machine Learning","RainForrest"],
+    tags: ["React js", "Flask", "Sklearn","Jupyter Notebook", "pikle", "Kaggle","Machine Learning","RainForrest"],
   },
   {
-    title: "Twitter Backend Clone",
-    description: "A Backend API for the Twitter application with MVP",
-    image: "https://placehold.co/600x400/1F2937/10B981?text=Twitter Backend",
-    githubLink: "https://github.com/Chanukaa2002/twitter_clone",
-    tags: ["Node.js", "Express", "MongoDB", "JWT", "Postman"],
+    title: "Movie Recommendation System",
+    description: "This is a Content-Based Movie recommendation system using Machine learning and Streamlit",
+    image: "https://res.cloudinary.com/dlohr6hrn/image/upload/v1757248790/movie_x67glp.png",
+    githubLink: "https://github.com/Chanukaa2002/Movie-Reccomender-System",
+    tags: [ "Streamlit","Sklearn","Jupyter Notebook", "pikle", "Kaggle","Machine Learning"],
+  },// movie rec system,contribution prjct
+  {
+    title: "MerdiAI (Contributing project)(Still developing)",
+    description: "This is a Text to diagram system project,i am contributing. this is still in beginning stage",
+    image: "https://res.cloudinary.com/dlohr6hrn/image/upload/v1757249686/MerdiAI_-_Turn_your_text_to_diagram_Mozilla_Firefox_2025-09-07_18-15-22_online-video-cutter.com_plm7oi.gif",
+    tags: ["Next.js","TypeScripts"],
   },
   {
     title: "Update soon",
