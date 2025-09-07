@@ -181,6 +181,13 @@ const allProjects = [
     tags: ["Flutter", "Firebase", "Gemini API"],
   },
   {
+    title: "Hogwarts House Predicting web App",
+    description: "This is a Simple web app created with react frontend and flask backend to showcase my Machine learning knowledge,and how to deal with data.",
+    image: "https://res.cloudinary.com/dlohr6hrn/image/upload/v1757242600/house_ycyu5h.png",
+    githubLink: "https://github.com/Chanukaa2002/house-sorting-app",
+    tags: ["React js", "Flask", "Sklearn", "pikle", "Kaggle","Machine Learning","RainForrest"],
+  },
+  {
     title: "Twitter Backend Clone",
     description: "A Backend API for the Twitter application with MVP",
     image: "https://placehold.co/600x400/1F2937/10B981?text=Twitter Backend",
