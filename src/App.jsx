@@ -109,6 +109,27 @@ const InstagramIcon = ({ className }) => (
   </svg>
 );
 
+const BlogIcon = ({ className }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={className}
+  >
+    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+    <path d="M8 7h8"></path>
+    <path d="M8 11h8"></path>
+    <path d="M8 15h6"></path>
+  </svg>
+);
+
 const MailIcon = ({ className }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -182,23 +203,45 @@ const allProjects = [
   },
   {
     title: "Hogwarts House Predicting web App",
-    description: "This is a Simple web app created with react frontend and flask backend to showcase my Machine learning knowledge,and how to deal with data.",
-    image: "https://res.cloudinary.com/dlohr6hrn/image/upload/v1757242600/house_ycyu5h.png",
+    description:
+      "This is a Simple web app created with react frontend and flask backend to showcase my Machine learning knowledge,and how to deal with data.",
+    image:
+      "https://res.cloudinary.com/dlohr6hrn/image/upload/v1757242600/house_ycyu5h.png",
     githubLink: "https://github.com/Chanukaa2002/house-sorting-app",
-    tags: ["React js", "Flask", "Sklearn","Jupyter Notebook", "pikle", "Kaggle","Machine Learning","RainForrest"],
+    tags: [
+      "React js",
+      "Flask",
+      "Sklearn",
+      "Jupyter Notebook",
+      "pikle",
+      "Kaggle",
+      "Machine Learning",
+      "RainForrest",
+    ],
   },
   {
     title: "Movie Recommendation System",
-    description: "This is a Content-Based Movie recommendation system using Machine learning and Streamlit",
-    image: "https://res.cloudinary.com/dlohr6hrn/image/upload/v1757248790/movie_x67glp.png",
+    description:
+      "This is a Content-Based Movie recommendation system using Machine learning and Streamlit",
+    image:
+      "https://res.cloudinary.com/dlohr6hrn/image/upload/v1757248790/movie_x67glp.png",
     githubLink: "https://github.com/Chanukaa2002/Movie-Reccomender-System",
-    tags: [ "Streamlit","Sklearn","Jupyter Notebook", "pikle", "Kaggle","Machine Learning"],
-  },// movie rec system,contribution prjct
+    tags: [
+      "Streamlit",
+      "Sklearn",
+      "Jupyter Notebook",
+      "pikle",
+      "Kaggle",
+      "Machine Learning",
+    ],
+  }, // movie rec system,contribution prjct
   {
     title: "MerdiAI (Contributing project)(Still developing)",
-    description: "This is a Text to diagram system project,i am contributing. this is still in beginning stage",
-    image: "https://res.cloudinary.com/dlohr6hrn/image/upload/v1757249686/MerdiAI_-_Turn_your_text_to_diagram_Mozilla_Firefox_2025-09-07_18-15-22_online-video-cutter.com_plm7oi.gif",
-    tags: ["Next.js","TypeScripts"],
+    description:
+      "This is a Text to diagram system project,i am contributing. this is still in beginning stage",
+    image:
+      "https://res.cloudinary.com/dlohr6hrn/image/upload/v1757249686/MerdiAI_-_Turn_your_text_to_diagram_Mozilla_Firefox_2025-09-07_18-15-22_online-video-cutter.com_plm7oi.gif",
+    tags: ["Next.js", "TypeScripts"],
   },
   {
     title: "Update soon",
@@ -358,7 +401,7 @@ const ScrollToTopButton = () => {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth"
+      behavior: "smooth",
     });
   };
 
@@ -373,7 +416,9 @@ const ScrollToTopButton = () => {
     <button
       onClick={scrollToTop}
       className={`fixed bottom-8 right-8 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-all duration-300 z-50 ${
-        isVisible ? "opacity-100 scale-100" : "opacity-0 scale-90 pointer-events-none"
+        isVisible
+          ? "opacity-100 scale-100"
+          : "opacity-0 scale-90 pointer-events-none"
       }`}
       aria-label="Scroll to top"
     >
@@ -413,6 +458,14 @@ const Hero = () => (
               className="px-6 py-3 font-bold text-white transition-transform transform bg-gray-700 rounded-lg shadow-lg hover:bg-gray-600 hover:scale-105"
             >
               GitHub Projects
+            </a>
+            <a
+              href="https://blog.chanukadilshan.live"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 font-bold text-white transition-transform transform bg-purple-600 rounded-lg shadow-lg hover:bg-purple-700 hover:scale-105"
+            >
+              My Blog
             </a>
           </div>
         </div>
