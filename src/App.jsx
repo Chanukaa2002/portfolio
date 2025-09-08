@@ -183,7 +183,7 @@ const allProjects = [
     githubLink: "https://github.com/Chanukaa2002/house-sorting-app",
     tags: ["React js", "Flask", "Sklearn","Jupyter Notebook", "pikle", "Kaggle","Machine Learning","RainForrest"],
   },
-   {
+  {
     title: "Laptop Price Prediction",
     description:
       "A Machine Learning based web application, that create for the predict the Laptop price with Regrasion Algorithm ",
@@ -200,6 +200,13 @@ const allProjects = [
     image: "https://res.cloudinary.com/dlohr6hrn/image/upload/v1757248790/movie_x67glp.png",
     githubLink: "https://github.com/Chanukaa2002/Movie-Reccomender-System",
     tags: [ "Streamlit","Sklearn","Jupyter Notebook", "pikle", "Kaggle","Machine Learning"],
+  },
+  {
+    title: "Personal Portfolio",
+    description: "This is a Portfolio website to showcase my highlights",
+    image: "https://res.cloudinary.com/dlohr6hrn/image/upload/v1757340008/Chanuka_Dilshan_Mozilla_Firefox_2025-09-08_19-25-27_online-video-cutter.com_fjrui0.gif",
+    githubLink: "https://github.com/Chanukaa2002/portfolio",
+    tags: [ "React Js","TailwindCSS","Vercel"],
   },
   {
     title: "MerdiAI (Contributing project)(Still developing)",
