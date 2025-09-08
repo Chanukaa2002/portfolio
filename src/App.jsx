@@ -163,7 +163,7 @@ const allProjects = [
   {
     title: "Build Own simple Neural Network",
     description: "In this project I am developed a simple Neural network from the scratch with only using python and numpy. this is only simple version of neural network this is not ready into industry level",
-    image: "https://res.cloudinary.com/dlohr6hrn/image/upload/v1757339101/network_ndljax.png",
+    image: "https://res.cloudinary.com/dlohr6hrn/image/upload/v1757347135/c31161d1-4b31-4a04-8f28-b3e482df8a79_1280x720_i0n3og.gif",
     githubLink:"https://github.com/Chanukaa2002/Neural-network-from-scratch",
     tags: ["Python","Numpy","Deep Learning","Neural Network"],
   },
