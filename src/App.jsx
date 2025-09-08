@@ -206,6 +206,7 @@ const allProjects = [
     description: "This is a Portfolio website to showcase my highlights",
     image: "https://res.cloudinary.com/dlohr6hrn/image/upload/v1757340008/Chanuka_Dilshan_Mozilla_Firefox_2025-09-08_19-25-27_online-video-cutter.com_fjrui0.gif",
     githubLink: "https://github.com/Chanukaa2002/portfolio",
+    liveLink:"https://chanukadilshan.live",
     tags: [ "React Js","TailwindCSS","Vercel"],
   },
   {
