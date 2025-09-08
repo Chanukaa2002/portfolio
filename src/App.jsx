@@ -161,15 +161,11 @@ const ScrollToTopIcon = ({ className }) => (
 // --- DATA ---
 const allProjects = [
   {
-    title: "Laptop Price Prediction",
-    description:
-      "A Machine Learning based web application, that create for the predict the Laptop price with Regrasion Algorithm ",
-    image:
-      "https://res.cloudinary.com/dlohr6hrn/image/upload/v1753446974/pred_yk4tyq.png",
-    liveLink:
-      "https://laptop-price-prediction-c3hs.onrender.comhttps://laptop-price-prediction-c3hs.onrender.com/",
-    githubLink: "https://github.com/Chanukaa2002/Laptop-price-prediction",
-    tags: ["Python", "Flash", "Jupyter Notebook"],
+    title: "Build Own simple Neural Network",
+    description: "In this project I am developed a simple Neural network from the scratch with only using python and numpy. this is only simple version of neural network this is not ready into industry level",
+    image: "https://res.cloudinary.com/dlohr6hrn/image/upload/v1757339101/network_ndljax.png",
+    githubLink:"https://github.com/Chanukaa2002/Neural-network-from-scratch",
+    tags: ["Python","Numpy","Deep Learning","Neural Network"],
   },
   {
     title: "EATRO - Mobile App",
@@ -187,13 +183,24 @@ const allProjects = [
     githubLink: "https://github.com/Chanukaa2002/house-sorting-app",
     tags: ["React js", "Flask", "Sklearn","Jupyter Notebook", "pikle", "Kaggle","Machine Learning","RainForrest"],
   },
+   {
+    title: "Laptop Price Prediction",
+    description:
+      "A Machine Learning based web application, that create for the predict the Laptop price with Regrasion Algorithm ",
+    image:
+      "https://res.cloudinary.com/dlohr6hrn/image/upload/v1753446974/pred_yk4tyq.png",
+    liveLink:
+      "https://laptop-price-prediction-c3hs.onrender.comhttps://laptop-price-prediction-c3hs.onrender.com/",
+    githubLink: "https://github.com/Chanukaa2002/Laptop-price-prediction",
+    tags: ["Python", "Flash", "Jupyter Notebook"],
+  },
   {
     title: "Movie Recommendation System",
     description: "This is a Content-Based Movie recommendation system using Machine learning and Streamlit",
     image: "https://res.cloudinary.com/dlohr6hrn/image/upload/v1757248790/movie_x67glp.png",
     githubLink: "https://github.com/Chanukaa2002/Movie-Reccomender-System",
     tags: [ "Streamlit","Sklearn","Jupyter Notebook", "pikle", "Kaggle","Machine Learning"],
-  },// movie rec system,contribution prjct
+  },
   {
     title: "MerdiAI (Contributing project)(Still developing)",
     description: "This is a Text to diagram system project,i am contributing. this is still in beginning stage",
