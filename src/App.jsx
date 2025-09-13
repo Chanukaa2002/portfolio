@@ -162,10 +162,12 @@ const ScrollToTopIcon = ({ className }) => (
 const allProjects = [
   {
     title: "Build Own simple Neural Network",
-    description: "In this project I am developed a simple Neural network from the scratch with only using python and numpy. this is only simple version of neural network this is not ready into industry level",
-    image: "https://res.cloudinary.com/dlohr6hrn/image/upload/v1757347135/c31161d1-4b31-4a04-8f28-b3e482df8a79_1280x720_i0n3og.gif",
-    githubLink:"https://github.com/Chanukaa2002/Neural-network-from-scratch",
-    tags: ["Python","Numpy","Deep Learning","Neural Network"],
+    description:
+      "In this project I am developed a simple Neural network from the scratch with only using python and numpy. this is only simple version of neural network this is not ready into industry level",
+    image:
+      "https://res.cloudinary.com/dlohr6hrn/image/upload/v1757347135/c31161d1-4b31-4a04-8f28-b3e482df8a79_1280x720_i0n3og.gif",
+    githubLink: "https://github.com/Chanukaa2002/Neural-network-from-scratch",
+    tags: ["Python", "Numpy", "Deep Learning", "Neural Network"],
   },
   {
     title: "EATRO - Mobile App",
@@ -178,10 +180,21 @@ const allProjects = [
   },
   {
     title: "Hogwarts House Predicting web App",
-    description: "This is a Simple web app created with react frontend and flask backend to showcase my Machine learning knowledge,and how to deal with data.",
-    image: "https://res.cloudinary.com/dlohr6hrn/image/upload/v1757242600/house_ycyu5h.png",
+    description:
+      "This is a Simple web app created with react frontend and flask backend to showcase my Machine learning knowledge,and how to deal with data.",
+    image:
+      "https://res.cloudinary.com/dlohr6hrn/image/upload/v1757242600/house_ycyu5h.png",
     githubLink: "https://github.com/Chanukaa2002/house-sorting-app",
-    tags: ["React js", "Flask", "Sklearn","Jupyter Notebook", "pikle", "Kaggle","Machine Learning","RainForrest"],
+    tags: [
+      "React js",
+      "Flask",
+      "Sklearn",
+      "Jupyter Notebook",
+      "pikle",
+      "Kaggle",
+      "Machine Learning",
+      "RainForrest",
+    ],
   },
   {
     title: "Laptop Price Prediction",
@@ -196,24 +209,36 @@ const allProjects = [
   },
   {
     title: "Movie Recommendation System",
-    description: "This is a Content-Based Movie recommendation system using Machine learning and Streamlit",
-    image: "https://res.cloudinary.com/dlohr6hrn/image/upload/v1757248790/movie_x67glp.png",
+    description:
+      "This is a Content-Based Movie recommendation system using Machine learning and Streamlit",
+    image:
+      "https://res.cloudinary.com/dlohr6hrn/image/upload/v1757248790/movie_x67glp.png",
     githubLink: "https://github.com/Chanukaa2002/Movie-Reccomender-System",
-    tags: [ "Streamlit","Sklearn","Jupyter Notebook", "pikle", "Kaggle","Machine Learning"],
+    tags: [
+      "Streamlit",
+      "Sklearn",
+      "Jupyter Notebook",
+      "pikle",
+      "Kaggle",
+      "Machine Learning",
+    ],
   },
   {
     title: "Personal Portfolio",
     description: "This is a Portfolio website to showcase my highlights",
-    image: "https://res.cloudinary.com/dlohr6hrn/image/upload/v1757340008/Chanuka_Dilshan_Mozilla_Firefox_2025-09-08_19-25-27_online-video-cutter.com_fjrui0.gif",
+    image:
+      "https://res.cloudinary.com/dlohr6hrn/image/upload/v1757340008/Chanuka_Dilshan_Mozilla_Firefox_2025-09-08_19-25-27_online-video-cutter.com_fjrui0.gif",
     githubLink: "https://github.com/Chanukaa2002/portfolio",
-    liveLink:"https://chanukadilshan.live",
-    tags: [ "React Js","TailwindCSS","Vercel"],
+    liveLink: "https://chanukadilshan.live",
+    tags: ["React Js", "TailwindCSS", "Vercel"],
   },
   {
     title: "MerdiAI (Contributing project)(Still developing)",
-    description: "This is a Text to diagram system project,i am contributing. this is still in beginning stage",
-    image: "https://res.cloudinary.com/dlohr6hrn/image/upload/v1757249686/MerdiAI_-_Turn_your_text_to_diagram_Mozilla_Firefox_2025-09-07_18-15-22_online-video-cutter.com_plm7oi.gif",
-    tags: ["Next.js","TypeScripts"],
+    description:
+      "This is a Text to diagram system project,i am contributing. this is still in beginning stage",
+    image:
+      "https://res.cloudinary.com/dlohr6hrn/image/upload/v1757249686/MerdiAI_-_Turn_your_text_to_diagram_Mozilla_Firefox_2025-09-07_18-15-22_online-video-cutter.com_plm7oi.gif",
+    tags: ["Next.js", "TypeScripts"],
   },
   {
     title: "Update soon",
@@ -373,7 +398,7 @@ const ScrollToTopButton = () => {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth"
+      behavior: "smooth",
     });
   };
 
@@ -388,7 +413,9 @@ const ScrollToTopButton = () => {
     <button
       onClick={scrollToTop}
       className={`fixed bottom-8 right-8 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-all duration-300 z-50 ${
-        isVisible ? "opacity-100 scale-100" : "opacity-0 scale-90 pointer-events-none"
+        isVisible
+          ? "opacity-100 scale-100"
+          : "opacity-0 scale-90 pointer-events-none"
       }`}
       aria-label="Scroll to top"
     >
@@ -957,6 +984,13 @@ export default function App() {
     certificates: {
       title: "My Certificates",
       items: [
+        {
+          title: "Advanced Learning Algorithms",
+          image:
+            "https://res.cloudinary.com/dlohr6hrn/image/upload/v1757780288/Capture_tgtfos.png",
+          verifyUrl:
+            "https://www.coursera.org/account/accomplishments/verify/8PQKQW6PKA3J",
+        },
         {
           title: "Supervised Machine Learning: Regression and Classification ",
           image:
