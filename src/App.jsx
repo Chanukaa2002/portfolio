@@ -197,13 +197,24 @@ const allProjects = [
     ],
   },
   {
+    title: "RoutZ - Path finder Web App",
+    description:
+      "A web application Done for DSA module in University, in here using dijkstra algorithm, find the shortest path between 2 locations, like University,office ,etc.",
+    image:
+      "https://res.cloudinary.com/dlohr6hrn/image/upload/v1760547141/Capture_cq262q.png",
+    liveLink:
+      "https://routz.chanukadilshan.live/",
+    githubLink: "https://github.com/Chanukaa2002/RoutZ",
+    tags: ["Express", "Node", "Next JS","Firebase"],
+  },
+  {
     title: "Laptop Price Prediction",
     description:
       "A Machine Learning based web application, that create for the predict the Laptop price with Regrasion Algorithm ",
     image:
       "https://res.cloudinary.com/dlohr6hrn/image/upload/v1753446974/pred_yk4tyq.png",
     liveLink:
-      "https://laptop-price-prediction-c3hs.onrender.comhttps://laptop-price-prediction-c3hs.onrender.com/",
+      "https://laptop-price-prediction-c3hs.onrender.com",
     githubLink: "https://github.com/Chanukaa2002/Laptop-price-prediction",
     tags: ["Python", "Flash", "Jupyter Notebook"],
   },
