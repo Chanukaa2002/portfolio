@@ -201,7 +201,7 @@ const allProjects = [
     description:
       "A small Chatbot develop for the portfolio website for awnser the quections about my self according to portfolio site",
     image:
-      "https://res.cloudinary.com/dlohr6hrn/image/upload/v1760547141/Capture_cq262q.png",
+      "https://res.cloudinary.com/dlohr6hrn/image/upload/v1761726303/Capture_y6lxfd.png",
     liveLink: "https://routz.chanukadilshan.live/",
     githubLink: "https://github.com/Chanukaa2002/Personalized_chatbot",
     tags: ["Jupyter notebook","Flask"],
