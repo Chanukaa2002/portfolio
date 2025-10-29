@@ -202,10 +202,9 @@ const allProjects = [
       "A web application Done for DSA module in University, in here using dijkstra algorithm, find the shortest path between 2 locations, like University,office ,etc.",
     image:
       "https://res.cloudinary.com/dlohr6hrn/image/upload/v1760547141/Capture_cq262q.png",
-    liveLink:
-      "https://routz.chanukadilshan.live/",
+    liveLink: "https://routz.chanukadilshan.live/",
     githubLink: "https://github.com/Chanukaa2002/RoutZ",
-    tags: ["Express", "Node", "Next JS","Firebase"],
+    tags: ["Express", "Node", "Next JS", "Firebase"],
   },
   {
     title: "Laptop Price Prediction",
@@ -213,8 +212,7 @@ const allProjects = [
       "A Machine Learning based web application, that create for the predict the Laptop price with Regrasion Algorithm ",
     image:
       "https://res.cloudinary.com/dlohr6hrn/image/upload/v1753446974/pred_yk4tyq.png",
-    liveLink:
-      "https://laptop-price-prediction-c3hs.onrender.com",
+    liveLink: "https://laptop-price-prediction-c3hs.onrender.com",
     githubLink: "https://github.com/Chanukaa2002/Laptop-price-prediction",
     tags: ["Python", "Flash", "Jupyter Notebook"],
   },
@@ -431,6 +429,223 @@ const ScrollToTopButton = () => {
       aria-label="Scroll to top"
     >
       <ScrollToTopIcon className="w-6 h-6" />
+    </button>
+  );
+};
+
+// --- Chat Panel & Chatbot Button ---
+const ChatPanel = ({ isOpen, onClose }) => {
+  const [messages, setMessages] = useState([]); // {sender: 'user'|'bot', text}
+  const [input, setInput] = useState("");
+  const [loading, setLoading] = useState(false);
+  const panelRef = useRef(null);
+
+  useEffect(() => {
+    if (isOpen && panelRef.current) {
+      // scroll to bottom when opened or messages change
+      panelRef.current.scrollTop = panelRef.current.scrollHeight;
+    }
+  }, [isOpen, messages]);
+
+  const sendMessage = async (e) => {
+    e && e.preventDefault();
+    const trimmed = input.trim();
+    if (!trimmed) return;
+
+    const userMsg = { sender: "user", text: trimmed };
+    setMessages((m) => [...m, userMsg]);
+    setInput("");
+    setLoading(true);
+
+    try {
+      const res = await fetch("https://chanuka72-bot.hf.space/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message: trimmed }),
+      });
+
+      if (!res.ok) {
+        throw new Error(`Server error: ${res.status}`);
+      }
+
+      const data = await res.json();
+      // expected shape: { confidence, intent, reply }
+      const botText = data && (data.reply || JSON.stringify(data));
+      setMessages((m) => [...m, { sender: "bot", text: botText }]);
+    } catch (err) {
+      setMessages((m) => [
+        ...m,
+        { sender: "bot", text: "Sorry, something went wrong." },
+      ]);
+      // keep console error for debugging
+      // eslint-disable-next-line no-console
+      console.error("Chat error:", err);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  // Simple markdown-like rendering helpers for bot replies
+  const renderInlineFormatting = (str) => {
+    const parts = String(str)
+      .split(/(\*\*[^\*]+\*\*)/g)
+      .filter(Boolean);
+    return parts.map((part, idx) => {
+      const m = part.match(/^\*\*(.+)\*\*$/);
+      if (m)
+        return (
+          <strong key={idx} className="font-semibold">
+            {m[1]}
+          </strong>
+        );
+      return <span key={idx}>{part}</span>;
+    });
+  };
+
+  const parseMessageToElements = (text) => {
+    if (!text) return null;
+    const lines = String(text).split(/\r?\n/);
+    const elements = [];
+    let i = 0;
+    while (i < lines.length) {
+      const raw = lines[i];
+      const line = raw.trim();
+      if (/^(?:\u2022|\-|\*)\s+/.test(line)) {
+        const items = [];
+        while (
+          i < lines.length &&
+          /^(?:\u2022|\-|\*)\s+/.test(lines[i].trim())
+        ) {
+          const li = lines[i].trim().replace(/^(?:\u2022|\-|\*)\s+/, "");
+          items.push(li);
+          i++;
+        }
+        elements.push(
+          <ul key={`ul-${i}`} className="pl-4 space-y-1 list-disc">
+            {items.map((it, k) => (
+              <li key={k} className="text-sm text-gray-200">
+                {renderInlineFormatting(it)}
+              </li>
+            ))}
+          </ul>
+        );
+        continue;
+      }
+      // normal paragraph
+      elements.push(
+        <p key={`p-${i}`} className="text-sm text-gray-200">
+          {renderInlineFormatting(line)}
+        </p>
+      );
+      i++;
+    }
+    return elements;
+  };
+
+  if (!isOpen) return null;
+
+  return (
+    <div className="fixed z-50 bottom-24 right-8 w-80 md:w-96">
+      <div className="flex flex-col h-96 overflow-hidden rounded-xl shadow-2xl bg-[#0b1120] border border-blue-500/30">
+        <div className="flex items-center justify-between px-4 py-3 border-b border-gray-800">
+          <h4 className="text-sm font-semibold text-white">Chat with Bot</h4>
+          <div className="flex items-center gap-2">
+            {loading && (
+              <div className="w-3 h-3 mr-2 bg-blue-400 rounded-full animate-pulse"></div>
+            )}
+            <button
+              onClick={onClose}
+              className="p-1 text-gray-300 rounded hover:bg-gray-800"
+              aria-label="Close chat"
+            >
+              <CloseIcon className="w-5 h-5" />
+            </button>
+          </div>
+        </div>
+
+        <div
+          ref={panelRef}
+          className="flex-1 px-4 py-3 space-y-3 overflow-y-auto"
+        >
+          {messages.length === 0 && (
+            <div className="text-sm text-gray-400">
+              Say hi 👋 — ask anything.
+            </div>
+          )}
+          {messages.map((m, i) => (
+            <div
+              key={i}
+              className={`flex ${
+                m.sender === "user" ? "justify-end" : "justify-start"
+              }`}
+            >
+              <div
+                className={`max-w-[80%] px-3 py-2 rounded-lg ${
+                  m.sender === "user"
+                    ? "bg-blue-600 text-white"
+                    : "bg-slate-700 text-gray-200"
+                }`}
+              >
+                <div className="break-words">
+                  {m.sender === "bot" ? (
+                    <div className="space-y-1">
+                      {parseMessageToElements(m.text)}
+                    </div>
+                  ) : (
+                    <div className="text-sm text-white">{m.text}</div>
+                  )}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <form
+          onSubmit={sendMessage}
+          className="flex items-center gap-2 p-3 border-t border-gray-800"
+        >
+          <input
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+            className="flex-1 px-3 py-2 text-sm text-white rounded bg-slate-800/60 focus:outline-none"
+            placeholder="Type a message..."
+            aria-label="Type a message"
+          />
+          <button
+            type="submit"
+            disabled={loading}
+            className="px-3 py-2 text-sm font-semibold text-white bg-blue-600 rounded hover:bg-blue-700 disabled:opacity-60"
+          >
+            Send
+          </button>
+        </form>
+      </div>
+    </div>
+  );
+};
+
+const ChatbotButton = ({ isOpen, onToggle }) => {
+  return (
+    <button
+      onClick={onToggle}
+      className={`fixed bottom-8 right-20 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-all duration-300 z-50`}
+      aria-label="Open chat"
+    >
+      {/* simple chat bubble icon */}
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className="w-6 h-6"
+      >
+        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+      </svg>
     </button>
   );
 };
@@ -990,6 +1205,7 @@ export default function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalData, setModalData] = useState({ title: "", items: [] });
   const [showAllProjects, setShowAllProjects] = useState(false);
+  const [chatOpen, setChatOpen] = useState(false);
 
   const allData = {
     certificates: {
@@ -1089,6 +1305,11 @@ export default function App() {
       <div className="relative overflow-x-hidden font-sans leading-normal tracking-tight text-white">
         <BackgroundStars />
         <AllProjectsPage onBack={handleBackToHome} />
+        <ChatbotButton
+          isOpen={chatOpen}
+          onToggle={() => setChatOpen((s) => !s)}
+        />
+        <ChatPanel isOpen={chatOpen} onClose={() => setChatOpen(false)} />
         <ScrollToTopButton />
       </div>
     );
@@ -1118,6 +1339,11 @@ export default function App() {
       />
 
       <Footer />
+      <ChatbotButton
+        isOpen={chatOpen}
+        onToggle={() => setChatOpen((s) => !s)}
+      />
+      <ChatPanel isOpen={chatOpen} onClose={() => setChatOpen(false)} />
       <ScrollToTopButton />
 
       <style jsx global>{`
