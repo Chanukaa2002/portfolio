@@ -197,6 +197,16 @@ const allProjects = [
     ],
   },
   {
+    title: "Personalized Chatbot from the Scratch",
+    description:
+      "A small Chatbot develop for the portfolio website for awnser the quections about my self according to portfolio site",
+    image:
+      "https://res.cloudinary.com/dlohr6hrn/image/upload/v1760547141/Capture_cq262q.png",
+    liveLink: "https://routz.chanukadilshan.live/",
+    githubLink: "https://github.com/Chanukaa2002/Personalized_chatbot",
+    tags: ["Jupyter notebook","Flask"],
+  },
+  {
     title: "RoutZ - Path finder Web App",
     description:
       "A web application Done for DSA module in University, in here using dijkstra algorithm, find the shortest path between 2 locations, like University,office ,etc.",
