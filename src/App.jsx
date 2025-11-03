@@ -204,7 +204,7 @@ const allProjects = [
       "https://res.cloudinary.com/dlohr6hrn/image/upload/v1761726303/Capture_y6lxfd.png",
     liveLink: "https://routz.chanukadilshan.live/",
     githubLink: "https://github.com/Chanukaa2002/Personalized_chatbot",
-    tags: ["Jupyter notebook","Flask"],
+    tags: ["Jupyter notebook", "Flask"],
   },
   {
     title: "RoutZ - Path finder Web App",
@@ -252,12 +252,19 @@ const allProjects = [
     tags: ["React Js", "TailwindCSS", "Vercel"],
   },
   {
-    title: "MerdiAI (Contributing project)(Still developing)",
-    description:
-      "This is a Text to diagram system project,i am contributing. this is still in beginning stage",
+    title: "MerdiAI (Contributing project)",
+    description: "This is a Text to diagram system project,i am contributed.",
     image:
       "https://res.cloudinary.com/dlohr6hrn/image/upload/v1757249686/MerdiAI_-_Turn_your_text_to_diagram_Mozilla_Firefox_2025-09-07_18-15-22_online-video-cutter.com_plm7oi.gif",
     tags: ["Next.js", "TypeScripts"],
+  },
+  {
+    title: "MLScaffold - Python Library",
+    description:
+      "Simple Python library develop for initiate the ML project for beginners,researchers and production level file structures.",
+    image: "https://placehold.co/600x400/1F2937/F59E0B?text=MLScafflod!",
+    githubLink: "https://github.com/Chanukaa2002/mlscaffold",
+    tags: ["Python"],
   },
   {
     title: "Update soon",
