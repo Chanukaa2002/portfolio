@@ -1243,6 +1243,14 @@ export default function App() {
             "https://www.coursera.org/account/accomplishments/verify/BFMDYIRJC63F",
         },
         {
+          title:
+            "Introduction to TensorFlow for Artificial Intelligence, Machine Learning, and Deep Learning",
+          image:
+            "https://res.cloudinary.com/dlohr6hrn/image/upload/v1762786472/cert_yxw6cz.png",
+          verifyUrl:
+            "https://www.coursera.org/account/accomplishments/verify/GGZC73FYE5WA",
+        },
+        {
           title: "Linear Algebra for Machine Learning and Data Science",
           image:
             "https://res.cloudinary.com/dlohr6hrn/image/upload/v1749288143/C1_ejvdwa.png",
