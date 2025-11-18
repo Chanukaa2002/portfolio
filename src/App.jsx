@@ -899,14 +899,16 @@ const Projects = ({ onShowMore }) => {
                 </div>
                 <p className="mb-6 text-gray-300">{project.description}</p>
                 <div className="flex items-center gap-4">
-                  <a
-                    href={project.liveLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 font-semibold text-white transition-colors hover:text-blue-400"
-                  >
-                    <ExternalLinkIcon className="w-5 h-5" /> Live Demo
-                  </a>
+                  {project.liveLink && (
+                    <a
+                      href={project.liveLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 font-semibold text-white transition-colors hover:text-blue-400"
+                    >
+                      <ExternalLinkIcon className="w-5 h-5" /> Live Demo
+                    </a>
+                  )}
                   <a
                     href={project.githubLink}
                     target="_blank"
@@ -982,14 +984,16 @@ const AllProjectsPage = ({ onBack }) => (
                 {project.description}
               </p>
               <div className="flex items-center gap-4 mt-auto">
-                <a
-                  href={project.liveLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 font-semibold text-white transition-colors hover:text-blue-400"
-                >
-                  <ExternalLinkIcon className="w-5 h-5" /> Live
-                </a>
+                {project.liveLink && (
+                  <a
+                    href={project.liveLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 font-semibold text-white transition-colors hover:text-blue-400"
+                  >
+                    <ExternalLinkIcon className="w-5 h-5" /> Live
+                  </a>
+                )}
                 <a
                   href={project.githubLink}
                   target="_blank"
