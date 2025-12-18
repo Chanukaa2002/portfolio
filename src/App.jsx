@@ -686,7 +686,7 @@ const Hero = () => (
           </p>
           <div className="flex justify-center gap-4 md:justify-start">
             <a
-              href="https://drive.google.com/file/d/1uBfXoYksxW3xPaJQyvVlCFQTLNa9PUTT/view?usp=sharing"
+              href="https://drive.google.com/file/d/123qqzF5dGoN741A881v59H4wvhMfwzB5/view?usp=sharing"
               className="px-6 py-3 font-bold text-white transition-transform transform bg-blue-600 rounded-lg shadow-lg hover:bg-blue-700 hover:scale-105"
             >
               Download CV
