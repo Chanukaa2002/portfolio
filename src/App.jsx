@@ -90,6 +90,24 @@ const EducationIcon = ({ className }) => (
   </svg>
 );
 
+const ExperienceIcon = ({ className }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={className}
+  >
+    <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+  </svg>
+);
+
 const InstagramIcon = ({ className }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -741,6 +759,45 @@ const About = () => {
   );
 };
 
+const Experience = () => {
+  const [ref, animationClasses] = useScrollAnimation();
+  const experienceHistory = [
+    {
+      company: "Ceylon X cooperation",
+      position: "Mobile App Developer - Intern",
+      timePeriod: "2026 Jan - Current",
+      description:
+        " focusing on develop real world high scale and compatible Mobile Application solutions.",
+    },
+  ];
+  return (
+    <section id="experience" ref={ref} className={`py-20 ${animationClasses}`}>
+      <div className="container px-4 mx-auto">
+        <h2 className="mb-12 text-4xl font-bold text-center text-white">
+          My <span className="text-blue-400">Experience</span>
+        </h2>
+        <div className="relative max-w-2xl mx-auto">
+          <div className="absolute left-4 top-0 h-full w-0.5 bg-blue-500/30"></div>
+          {experienceHistory.map((exp, index) => (
+            <div key={index} className="relative pl-12 mb-10">
+              <div className="absolute left-0 top-1 w-8 h-8 bg-blue-600 rounded-full border-4 border-[#0b1120] flex items-center justify-center">
+                <ExperienceIcon className="w-4 h-4 text-white" />
+              </div>
+              <div className="p-6 border rounded-lg shadow-lg bg-slate-800/50 backdrop-blur-sm border-slate-700/50">
+                <p className="mb-1 font-semibold text-blue-300">
+                  {exp.timePeriod}
+                </p>
+                <h3 className="text-xl font-bold text-white">{exp.company}</h3>
+                <p className="mb-3 text-gray-400">{exp.position}</p>
+                <p className="text-gray-300">{exp.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
 const Education = () => {
   const [ref, animationClasses] = useScrollAnimation();
   const educationHistory = [
@@ -1354,6 +1411,7 @@ export default function App() {
       <main className="relative z-10">
         <Hero />
         <About />
+        <Experience />
         <Education />
         <Skills />
         <Projects onShowMore={handleShowAllProjects} />
