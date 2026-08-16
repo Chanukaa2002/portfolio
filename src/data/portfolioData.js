@@ -1,7 +1,7 @@
 export const personalInfo = {
   name: "Chanuka Dilshan",
   shortName: "Chanuka",
-  brandName: "Chanuka.ai",
+  brandName: "Chanuka Dilshan",
   domain: "chanukadilshan.me",
   title: "ML / MLOps Engineer",
   tagline: "Building Production ML Systems with ZenML & MLflow",

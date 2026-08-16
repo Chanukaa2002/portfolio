@@ -31,7 +31,7 @@ export const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 flex items-center justify-between">
         
-        {/* Brand Logo (Matching Screenshot 3: Merwan.ai / Chanuka.ai) */}
+        {/* Brand Logo */}
         <a href="#home" className="group flex items-center gap-2 text-2xl font-extrabold tracking-tight">
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-300 to-purple-400 group-hover:opacity-90 transition-opacity">
             {personalInfo.brandName}
