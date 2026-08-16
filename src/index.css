@@ -1,36 +1,162 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-body {
-  background-color: #001f3f;
-}
-html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%; /* ensure it fills screen */
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: "Outfit", "Plus Jakarta Sans", system-ui, sans-serif;
+  }
+
+  body {
+    background-color: #070b19;
+    color: #e2e8f0;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #070b19;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #1e293b;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #334155;
+  }
 }
 
-
-.shadow-glow {
-  box-shadow: 0 0 8px 1px rgba(132, 204, 22, 0.6); /* Lime green glow */
-}
-.stars {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;      /* viewport width */
-  height: 100vh;     /* viewport height */
-  overflow: hidden;
-  pointer-events: none;
-  z-index: -1;
+/* Glassmorphic card styling */
+.glass-panel {
+  background: rgba(11, 17, 38, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-
-.glass-effect {
-  background: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
-  backdrop-filter: blur(10px); /* Blur effect */
-  border-radius: 10px; /* Rounded corners */
-  border: 1px solid rgba(255, 255, 255, 0.2); /* Light border */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+.glass-panel-glow {
+  background: rgba(11, 17, 38, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(147, 51, 234, 0.3);
+  box-shadow: 0 0 30px -5px rgba(124, 58, 237, 0.25);
 }
+
+.glass-panel-cyan {
+  background: rgba(11, 17, 38, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  box-shadow: 0 0 25px -5px rgba(56, 189, 248, 0.25);
+}
+
+/* Neon text gradient */
+.text-gradient-purple {
+  background: linear-gradient(135deg, #00d2ff 0%, #818cf8 40%, #c084fc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-cyan {
+  background: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* SVG circuit animations */
+.circuit-line {
+  stroke-dasharray: 8 4;
+  animation: circuitFlow 20s linear infinite;
+}
+
+@keyframes circuitFlow {
+  from {
+    stroke-dashoffset: 200;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Neural Synapse Interconnection Flow Animations */
+.neural-pulse-fast {
+  stroke-dasharray: 6 12;
+  animation: neuralFlow 4s linear infinite;
+}
+
+.neural-pulse-slow {
+  stroke-dasharray: 8 16;
+  animation: neuralFlow 7s linear infinite reverse;
+}
+
+.neural-pulse-cyan {
+  stroke-dasharray: 10 20;
+  animation: neuralFlow 5s linear infinite;
+}
+
+@keyframes neuralFlow {
+  from {
+    stroke-dashoffset: 240;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Subtle Synaptic Pulse Flow */
+.subtle-pulse-1 {
+  stroke-dasharray: 40 180;
+  animation: subtlePulse 8s linear infinite;
+}
+
+.subtle-pulse-2 {
+  stroke-dasharray: 50 200;
+  animation: subtlePulse 11s linear infinite reverse;
+}
+
+@keyframes subtlePulse {
+  from {
+    stroke-dashoffset: 440;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Mac terminal window styling */
+.mac-window {
+  background: #090e21;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow:
+    0 20px 40px -15px rgba(0, 0, 0, 0.7),
+    0 0 30px rgba(56, 189, 248, 0.08);
+}
+
+/* 3D Carousel Perspective & Smooth Slide Animations */
+.carousel-3d-stage {
+  perspective: 1200px;
+  perspective-origin: center center;
+  transform-style: preserve-3d;
+}
+
+.slide-fade-in {
+  animation: slideFadeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes slideFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
