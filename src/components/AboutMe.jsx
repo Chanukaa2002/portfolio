@@ -21,7 +21,7 @@ export const AboutMe = () => {
   }, []);
 
   return (
-    <section id="about" className="relative py-24 px-4 sm:px-6 lg:px-12 bg-[#070b19] overflow-hidden">
+    <section id="about" className="relative py-24 px-4 sm:px-6 lg:px-12 bg-transparent overflow-hidden">
       {/* Background ambient lighting */}
       <div className="absolute top-1/3 left-1/4 w-[500px] h-[500px] bg-blue-900/10 rounded-full blur-3xl pointer-events-none -z-10" />
       <div className="absolute bottom-10 right-10 w-[450px] h-[450px] bg-purple-900/15 rounded-full blur-3xl pointer-events-none -z-10" />

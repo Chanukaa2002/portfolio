@@ -3,7 +3,7 @@ import { experienceData, educationData } from "../data/portfolioData";
 
 export const ExperienceEducation = () => {
   return (
-    <section id="experience" className="relative py-24 px-4 sm:px-6 lg:px-12 bg-[#070b19] overflow-hidden">
+    <section id="experience" className="relative py-24 px-4 sm:px-6 lg:px-12 bg-transparent overflow-hidden">
       {/* Background ambient lighting */}
       <div className="absolute top-1/2 left-1/4 w-[500px] h-[500px] bg-blue-900/10 rounded-full blur-[130px] pointer-events-none -z-10" />
 

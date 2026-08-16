@@ -3,7 +3,7 @@ import { personalInfo } from "../data/portfolioData";
 
 export const ContactSection = () => {
   return (
-    <section id="contact" className="relative py-28 px-4 sm:px-6 lg:px-12 bg-[#070b19] overflow-hidden">
+    <section id="contact" className="relative py-28 px-4 sm:px-6 lg:px-12 bg-transparent overflow-hidden">
       {/* Glow aura */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-tr from-purple-600/15 via-blue-600/10 to-transparent rounded-full blur-[140px] pointer-events-none -z-10" />
 

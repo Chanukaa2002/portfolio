@@ -76,7 +76,7 @@ export const BrainSkills = () => {
   return (
     <section
       id="skills"
-      className="relative py-24 px-4 sm:px-6 lg:px-12 overflow-hidden bg-[#070b19]"
+      className="relative py-24 px-4 sm:px-6 lg:px-12 overflow-hidden bg-transparent"
     >
       {/* Dynamic ambient gradient glow */}
       <div className="absolute top-1/2 right-1/4 -translate-y-1/2 w-[550px] h-[550px] bg-purple-900/15 rounded-full blur-3xl pointer-events-none -z-10" />

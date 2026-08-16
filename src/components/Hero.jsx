@@ -21,7 +21,7 @@ export const Hero = () => {
   return (
     <section
       id="home"
-      className="relative min-h-[90vh] lg:min-h-screen flex items-center justify-center pt-28 pb-16 px-4 sm:px-6 lg:px-12 bg-[#070b19] overflow-hidden"
+      className="relative min-h-[90vh] lg:min-h-screen flex items-center justify-center pt-28 pb-16 px-4 sm:px-6 lg:px-12 bg-transparent overflow-hidden"
     >
       {/* Dynamic ambient gradients */}
       <div className="absolute top-1/4 left-1/10 w-[550px] h-[550px] bg-blue-600/10 rounded-full blur-[120px] pointer-events-none -z-10" />

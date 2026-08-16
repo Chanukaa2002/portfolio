@@ -52,7 +52,7 @@ export const CertificatesSection = () => {
   return (
     <section
       id="certificates"
-      className="relative py-24 px-4 sm:px-6 lg:px-12 bg-[#070b19] overflow-hidden"
+      className="relative py-24 px-4 sm:px-6 lg:px-12 bg-transparent overflow-hidden"
     >
       {/* Background ambient lighting */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-purple-900/15 rounded-full blur-[160px] pointer-events-none -z-10" />
