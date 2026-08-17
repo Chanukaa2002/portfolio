@@ -155,6 +155,8 @@ export const CertificatesSection = () => {
               zIndex = 0;
             }
 
+            const isBadges = activeTab === "badges";
+
             return (
               <div
                 key={item.id || index}
@@ -171,16 +173,22 @@ export const CertificatesSection = () => {
                 }}
               >
                 <div
-                  className={`w-full h-full rounded-3xl overflow-hidden bg-white p-3 sm:p-4 transition-all duration-500 ${
-                    isCenter
-                      ? "border-2 border-purple-500 shadow-[0_0_40px_rgba(168,85,247,0.4),0_20px_45px_rgba(0,0,0,0.85)] ring-1 ring-purple-400/40"
-                      : "border border-slate-800/80 bg-slate-900/90 shadow-lg opacity-80 hover:opacity-100"
+                  className={`w-full h-full transition-all duration-500 flex items-center justify-center ${
+                    isBadges
+                      ? isCenter
+                        ? "p-2 sm:p-4 bg-transparent border-none shadow-none ring-0"
+                        : "p-2 sm:p-4 bg-transparent border-none shadow-none ring-0 opacity-40 hover:opacity-75"
+                      : isCenter
+                        ? "rounded-3xl overflow-hidden p-3 sm:p-4 bg-white border-2 border-purple-500 shadow-[0_0_40px_rgba(168,85,247,0.4),0_20px_45px_rgba(0,0,0,0.85)] ring-1 ring-purple-400/40"
+                        : "rounded-3xl overflow-hidden p-3 sm:p-4 bg-slate-900/90 border border-slate-800/80 shadow-lg opacity-80 hover:opacity-100"
                   }`}
                 >
                   <img
                     src={item.image}
                     alt={item.title}
-                    className="w-full h-full object-contain rounded-2xl"
+                    className={`w-full h-full object-contain ${
+                      isBadges ? "drop-shadow-[0_10px_25px_rgba(0,0,0,0.5)]" : "rounded-2xl"
+                    }`}
                     draggable={false}
                   />
                 </div>
@@ -222,7 +230,11 @@ export const CertificatesSection = () => {
                 href={currentItem.verifyUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-7 py-3 rounded-xl text-sm font-semibold text-white bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:from-blue-500 hover:via-indigo-500 hover:to-purple-500 shadow-md shadow-purple-900/40 transition-all hover:scale-105"
+                className={`inline-flex items-center gap-2 px-7 py-3 rounded-xl text-sm font-semibold text-white transition-all hover:scale-105 ${
+                  activeTab === "badges"
+                    ? "bg-gradient-to-r from-cyan-600 via-teal-600 to-blue-600 hover:from-cyan-500 hover:via-teal-500 hover:to-blue-500 shadow-md shadow-cyan-900/40"
+                    : "bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:from-blue-500 hover:via-indigo-500 hover:to-purple-500 shadow-md shadow-purple-900/40"
+                }`}
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
