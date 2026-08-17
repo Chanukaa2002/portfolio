@@ -27,28 +27,6 @@ export const NeuralNetworkBackground = () => {
 
     setCanvasDimensions();
 
-    // Mouse coordinates for interactive neural connections
-    let mouse = {
-      x: -1000,
-      y: -1000,
-      targetX: -1000,
-      targetY: -1000,
-      isActive: false,
-    };
-
-    const handleMouseMove = (e) => {
-      mouse.targetX = e.clientX;
-      mouse.targetY = e.clientY;
-      mouse.isActive = true;
-    };
-
-    const handleMouseLeave = () => {
-      mouse.isActive = false;
-    };
-
-    window.addEventListener("mousemove", handleMouseMove, { passive: true });
-    window.addEventListener("mouseleave", handleMouseLeave, { passive: true });
-
     // Neural network color palette (AI / Deep Learning neon theme)
     const nodeColors = [
       "56, 189, 248",  // Cyan 400
@@ -60,7 +38,6 @@ export const NeuralNetworkBackground = () => {
 
     let nodes = [];
     const maxConnectionDist = 145; // Connection radius
-    const mouseConnectionDist = 180; // Cursor interaction radius
 
     const initNodes = () => {
       // Density calculated for optimal balance of tech aesthetics & readability
@@ -138,12 +115,6 @@ export const NeuralNetworkBackground = () => {
 
     // Animation Loop
     const render = (time) => {
-      // Smooth mouse lerp
-      if (mouse.isActive) {
-        mouse.x += (mouse.targetX - mouse.x) * 0.1;
-        mouse.y += (mouse.targetY - mouse.y) * 0.1;
-      }
-
       ctx.clearRect(0, 0, width, height);
       tick += 1;
 
@@ -165,18 +136,6 @@ export const NeuralNetworkBackground = () => {
         // Decay activation flash
         if (node.pulseAlpha > 0) {
           node.pulseAlpha -= 0.02;
-        }
-
-        // Mouse gentle gravitational pull
-        if (mouse.isActive) {
-          const dx = mouse.x - node.x;
-          const dy = mouse.y - node.y;
-          const dist = Math.sqrt(dx * dx + dy * dy);
-          if (dist < mouseConnectionDist && dist > 10) {
-            const force = (1 - dist / mouseConnectionDist) * 0.2;
-            node.x += (dx / dist) * force;
-            node.y += (dy / dist) * force;
-          }
         }
       }
 
@@ -204,23 +163,6 @@ export const NeuralNetworkBackground = () => {
 
             ctx.strokeStyle = gradient;
             ctx.lineWidth = 0.9;
-            ctx.stroke();
-          }
-        }
-
-        // Cursor interactive synapse connection
-        if (mouse.isActive) {
-          const mdx = mouse.x - nodeA.x;
-          const mdy = mouse.y - nodeA.y;
-          const mdist = Math.sqrt(mdx * mdx + mdy * mdy);
-
-          if (mdist < mouseConnectionDist) {
-            const mAlpha = (1 - mdist / mouseConnectionDist) * 0.45;
-            ctx.beginPath();
-            ctx.moveTo(nodeA.x, nodeA.y);
-            ctx.lineTo(mouse.x, mouse.y);
-            ctx.strokeStyle = `rgba(56, 189, 248, ${mAlpha})`;
-            ctx.lineWidth = 1.1;
             ctx.stroke();
           }
         }
@@ -280,22 +222,6 @@ export const NeuralNetworkBackground = () => {
         ctx.fill();
       }
 
-      // 5. Draw Active Cursor Neuron
-      if (mouse.isActive && mouse.x > 0 && mouse.y > 0) {
-        ctx.beginPath();
-        ctx.arc(mouse.x, mouse.y, 4.5, 0, Math.PI * 2);
-        ctx.fillStyle = "rgba(56, 189, 248, 0.85)";
-        ctx.shadowColor = "rgba(56, 189, 248, 0.9)";
-        ctx.shadowBlur = 12;
-        ctx.fill();
-        ctx.shadowBlur = 0;
-
-        ctx.beginPath();
-        ctx.arc(mouse.x, mouse.y, 8, 0, Math.PI * 2);
-        ctx.fillStyle = "rgba(56, 189, 248, 0.2)";
-        ctx.fill();
-      }
-
       animationFrameId = requestAnimationFrame(render);
     };
 
@@ -304,8 +230,6 @@ export const NeuralNetworkBackground = () => {
     return () => {
       cancelAnimationFrame(animationFrameId);
       window.removeEventListener("resize", handleResize);
-      window.removeEventListener("mousemove", handleMouseMove);
-      window.removeEventListener("mouseleave", handleMouseLeave);
     };
   }, []);
 
